@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = checker
+NAME = checker push_swap
 
 SRC = main.c checker.c
 
