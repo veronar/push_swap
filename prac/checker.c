@@ -16,7 +16,11 @@ void	ft_fill_stack(int **stack_size, char **av, int ac) /*pointer logic is flawe
 	temp = 0;
 	while (ac > 0)
 	{
+		//check for duplicates
 		//if is_digit? How do we check if there is only numbers?
+		//check values, then malloc for number
+		//read value, then comapre to all in list (nodes) and if not there then add a node for it
+		// else error
 		if (!(temp = atoi(av[ac])))
 			return (ft_error);
 		*stack_a = temp;
@@ -87,5 +91,5 @@ int		main(int ac, char **av)
 		return (0);
 	else
 		stack_size = ac - 1;
-	return (ft_check_sort);
+	return (ft_check_sort());
 }
