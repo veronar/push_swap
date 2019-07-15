@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/15 12:18:56 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/15 16:24:01 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,10 @@ typedef struct	i_list
 	struct i_list	*next;
 }				j_list;
 
+int			ft_error(void);
+int			ft_checkint(char **av);
+j_list		*ft_newnode(char *av);
+int			ft_fill_list(j_list *head, int ac, char **av, int a);
+j_list		*ft_init_list(int ac, char **av);
 
 #endif

@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vesingh <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/07/11 10:51:19 by vesingh          ###   ########.fr        #
+#    Updated: 2019/07/15 16:27:33 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = checker push_swap
+NAME = checker
 
-SRC = main.c checker.c
+SRC = ft_init_list.c checker.c
 
 INCL = push_swap.h
 
