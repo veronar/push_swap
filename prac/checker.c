@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
+/*   Updated: 2019/07/15 10:23:22 by vesingh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "./libft/libft.h"
 
 int		ft_error(void)
 {
 	ft_putendl("Error");
-	retunr (-1);
+	return (-1);
 }
 
 void	ft_fill_stack(int **stack_size, char **av, int ac) /*pointer logic is flawed here*/
@@ -34,31 +45,31 @@ void	ft_read_operations()
 
 	while (get_next_line(1, &line))
 	{
-		if (strcmp(line, "sa") == 0)
+		if (ft_strcmp(line, "sa") == 0)
 			//swap a - swap the first 2 elements at the top of stack a. Do nothing if there 
 			//is only one or no elements).
-		else if (strcmp(line, "sb") == 0)
+		else if (ft_strcmp(line, "sb") == 0)
 			//swap b - swap the first 2 elements at the top of stack b. Do nothing if there
 			//is only one or no elements).
-		else if (strcmp(line, "ss") == 0)
+		else if (ft_strcmp(line, "ss") == 0)
 			//sa & sb at the same time
-		else if (strcmp(line, "pa") == 0)
+		else if (ft_strcmp(line, "pa") == 0)
 			//push a - take the first element at top of b and put it at top of a
 			//do nothing if b is empty
-		else if (strcmp(line, "pb") == 0)
+		else if (ft_strcmp(line, "pb") == 0)
 			//push b - take the first element at top of a and put it at top of b
 			//do nothing if a is empty
-		else if (strcmp(line, "ra") == 0)
+		else if (ft_strcmp(line, "ra") == 0)
 			//rotate a - shift up all elements of stack a by 1, ie first elem becomes last
-		else if (strcmp(line, "rb") == 0)
+		else if (ft_strcmp(line, "rb") == 0)
 			//rotate b - shift up all elements of stack b by 1, ie first elem becomes last
-		else if (strcmp(line, "rr") == 0)
+		else if (ft_strcmp(line, "rr") == 0)
 			//ra & rb at the same time
-		else if (strcmp(line, "rra") == 0)
+		else if (ft_strcmp(line, "rra") == 0)
 			//reverse rotate a - shift down all elements of stack a by 1, ie last elem becomes first
-		else if (strcmp(line, "rrb") == 0)
+		else if (ft_strcmp(line, "rrb") == 0)
 			//reverse rotate b - shift down all elements of stack b by 1, ie last elem becomes first
-		else if (strcmp(line, "rrr") == 0)
+		else if (ft_strcmp(line, "rrr") == 0)
 			//rra and rrb at the same time
 		else 
 			return (ft_error);
