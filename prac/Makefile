@@ -6,7 +6,7 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/07/16 10:56:39 by vesingh          ###   ########.fr        #
+#    Updated: 2019/07/16 12:24:04 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,14 +19,14 @@ INCL = push_swap.h
 all: $(NAME)
 
 $(NAME):
-	make -C ./libft
+	#make -C ./libft
 	gcc -Wall -Werror -Wextra -o $(NAME) $(SRC) ./libft/libft.a
 
 clean:
-	make clean -C ./libft
+	#make clean -C ./libft
 
 fclean: clean
-	make fclean -C ./libft
-	rm -f $(NAME)
+	#make fclean -C ./libft
+	#rm -f $(NAME)
 
 re: fclean all
