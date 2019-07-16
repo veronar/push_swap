@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/15 16:30:01 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/16 11:02:58 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ int			ft_error(void)
 int			main(int ac, char **av)
 {
 	j_list	*head;
+	j_list	*test;
 
 	if (ac == 1)
 		return (0);
 	if (!(head = ft_init_list(ac, av)))
 		return (ft_error());
-	while (head != NULL)
-	{
-		printf("n = %d\n", head->n);
-		head = head->next;
-	}
+	test = head;
+	ft_print_stack(&test);
+	ft_swap_a(&test);
+	ft_print_stack(&test);
 	return (0);
 }

@@ -6,13 +6,13 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/07/15 16:50:08 by vesingh          ###   ########.fr        #
+#    Updated: 2019/07/16 10:56:39 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = checker
 
-SRC = ft_init_list.c checker.c
+SRC = ft_init_list.c checker.c swap.c test.c
 
 INCL = push_swap.h
 

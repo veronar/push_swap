@@ -6,12 +6,17 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/15 16:29:57 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/16 09:55:05 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "./libft/libft.h"
+
+/*
+** ft_checkint: checks each character in the arguments given
+** if its a digit, check next; if not a digit, return error.
+*/
 
 int			ft_checkint(char **av)
 {
@@ -37,6 +42,11 @@ int			ft_checkint(char **av)
 	return (1);
 }
 
+/*
+** ft_newnode: creates a new node at the end of list
+** populating it with the integer conversion of the relevant argument
+*/
+
 j_list		*ft_newnode(char *av)
 {
 	j_list	*new;
@@ -50,6 +60,17 @@ j_list		*ft_newnode(char *av)
 	new->next = NULL;
 	return (new);
 }
+
+/*
+** ft_fill_list: iterates from head of list (head node)
+** condition iterates from second node ie. a = 2, because we have
+** already created the head node with the first (a = 1) argument
+** in the initial ft_newnode call in ft_init_list
+**
+** first checks if there is a duplicate of the current value (argument)
+** already in the list. If there isnt, create a new node and populate it
+** else return error
+*/
 
 int			ft_fill_list(j_list *head, int ac, char **av, int a)
 {
@@ -73,6 +94,14 @@ int			ft_fill_list(j_list *head, int ac, char **av, int a)
 	}
 	return (1);
 }
+
+/*
+** ft_init_list: takes arguments given by run of program
+** 1. check arguments given are digits only; else returns error
+** 2. creates head node (start of list) & fills with first
+** argument (converted to integer)
+** 3. fills remainder of list with remainder of arguments converted to integers
+*/
 
 j_list		*ft_init_list(int ac, char **av)
 {
