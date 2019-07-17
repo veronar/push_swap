@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/17 09:00:43 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/17 10:55:30 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,6 @@ int			ft_fill_list(j_list **head, int ac, char **av, int a)
 	j_list	*prev;
 
 	current = *head;
-	prev = current;
 	while (a < ac)
 	{
 		temp = *head;
