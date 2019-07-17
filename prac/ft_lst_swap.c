@@ -1,17 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_lst_swap.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/17 11:15:17 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/17 11:26:37 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "./libft/libft.h"
+
+/*
+** ft_lst_swap: swap the first 2 elements at the top of a stack.
+** Do nothing if there is only one or no elements).
+** Pointer to start of specific stack must be called, ie. stack a or stack b.
+*/
 
 void		ft_lst_swap(j_list **head)
 {
@@ -25,6 +31,11 @@ void		ft_lst_swap(j_list **head)
 	ft_swap(&first->n, &second->n);
 	return ;
 }
+
+/*
+** ft_ss_swap_ab: swap the first 2 elements at the top of a stack a and stack b
+** Do nothing if there is only one or no elements).
+*/
 
 void		ft_ss_swap_ab(j_list **head_a, j_list **head_b)
 {

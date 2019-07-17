@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/17 11:17:39 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/17 11:38:02 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int			main(int ac, char **av)
 		return (ft_error());
 	test = head;
 	ft_print_stack(&test);
-	ft_lst_rotate(&test);
+	ft_lst_rev_rot(&test);
 	ft_print_stack(&test);
 	return (0);
 }

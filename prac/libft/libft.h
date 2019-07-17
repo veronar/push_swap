@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 14:59:28 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/15 09:58:05 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/17 11:39:38 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char				*ft_strdupdel(char **str);
 char				*ft_strjoinfree(char *s1, char *s2);
 int					get_next_line(const int fd, char **line);
-void                ft_swap(int *a, int *b);
+void				ft_swap(int *a, int *b);
 
 #endif
