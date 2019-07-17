@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/16 09:55:05 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/17 09:00:43 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ j_list		*ft_newnode(char *av)
 		ft_error();
 		return (NULL);
 	}
+	new->prev = NULL;
 	new->n = ft_atoi(av);
 	new->next = NULL;
 	return (new);
@@ -72,16 +73,18 @@ j_list		*ft_newnode(char *av)
 ** else return error
 */
 
-int			ft_fill_list(j_list *head, int ac, char **av, int a)
+int			ft_fill_list(j_list **head, int ac, char **av, int a)
 {
 	j_list	*temp;
 	j_list	*current;
+	j_list	*prev;
 
-	current = head;
+	current = *head;
+	prev = current;
 	while (a < ac)
 	{
-		temp = head;
-		while (temp != NULL)
+		temp = *head;
+		while (temp->next != NULL)
 		{
 			if (temp->n == ft_atoi(av[a]))
 				return (0);
@@ -90,7 +93,9 @@ int			ft_fill_list(j_list *head, int ac, char **av, int a)
 		if (!(current->next = ft_newnode(av[a])))
 			return (0);
 		a++;
+		prev = current;
 		current = current->next;
+		current->prev = prev;
 	}
 	return (1);
 }
@@ -117,7 +122,7 @@ j_list		*ft_init_list(int ac, char **av)
 		return (NULL);
 	current = head;
 	a++;
-	if (ft_fill_list(head, ac, av, a) == 0)
+	if (ft_fill_list(&head, ac, av, a) == 0)
 		return (NULL);
 	return (head);
 }

@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:20:57 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/16 11:03:14 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/17 09:03:24 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ void		ft_print_stack(j_list **head)
 	{
 		ft_putstr("n = ");
 		ft_putnbr(start->n);
-		ft_putchar('\n');
+		//ft_putchar('\n');
 	 	// printf("n = %d\n", start->n);
 	 	start = start->next;
 	}
+	ft_putchar('\n');
 }
 
 /* 
