@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/19 15:23:33 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/19 15:44:39 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int			ft_check_sort(j_list **head_a, j_list **head_b)
 	second = current->next;
 	while (second->next != NULL)
 	{
-		if (second->n > current->n)
+		if (second->n < current->n)
 			return (0);
 		current = current->next;
 		second = second->next;
@@ -76,23 +76,21 @@ int			ft_do_op(char *line, j_list **head_a, j_list **head_b)
 ** calls ft_do_op to runs operations.
 */
 
-int			ft_read_op(j_list **head_a, j_list **head_b)
+void		ft_read_op(j_list **head_a, j_list **head_b)
 {
 	char	*line;
 
 	while (get_next_line(0, &line))
 	{
 		if (ft_do_op(line, head_a, head_b) == 1)
-		{
 			free(line);
-			return (0);
-		}
-		free(line);
+		else
+			free(line);
 	}
 	free(line);
+	//ft_print_stack(head_a);
 	if (ft_check_sort(head_a, head_b) == 1)
 		ft_putendl("OK");
 	else
 		ft_putendl("KO");
-	return (1);
 }
