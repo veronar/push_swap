@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 11:21:30 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/19 15:13:20 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/22 15:57:40 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void		ft_lst_rev_rot(j_list **head)
 	j_list	*last;
 	j_list	*second_last;
 
+	if (*head == NULL || (*head)->next == NULL)
+		return ;
 	first = *head;
 	last = *head;
 	while (last->next != NULL)

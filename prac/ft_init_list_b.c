@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 10:50:38 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/19 11:35:56 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/22 15:16:14 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ j_list		*ft_newnode_b(int a)
 	j_list	*new;
 
 	if (!(new = ft_memalloc(sizeof(j_list))))
-	{
-		ft_error();
 		return (NULL);
-	}
 	new->prev = NULL;
 	new->n = a;
 	new->next = NULL;
