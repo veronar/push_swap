@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 12:35:23 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/23 07:48:28 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/23 11:45:57 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "./libft/libft.h"
 
 /*
-** ft_push_new_b: take the first element at the top of a stack and puts
+** ft_push_new_b: take the first element at the top stack a and puts
 ** at the top of stack b, this function mallocs for stack b if
 ** there isnt one.
 */
@@ -59,6 +59,8 @@ void		ft_push_new_a(j_list **head_a, j_list **head_b)
 	*head_b = b_first->next;
 	b_first = *head_b;
 	b_first->prev = NULL;
+	if (*head_b == NULL)
+		ft_lst_del(head_b);
 }
 
 /*

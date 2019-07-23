@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/23 08:18:05 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/23 12:08:47 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,11 +84,11 @@ void		ft_read_op(j_list **head_a, j_list **head_b)
 	while (get_next_line(0, &line))
 	{
 		if (ft_do_op(line, head_a, head_b) == 1)
-			free(line);
+			ft_memdel((void **)&line);
 		else
 		{
 			ft_lst_del(head_b);
-			free(line);
+			ft_memdel((void **)&line);
 			ft_error(head_a);
 		}
 		ft_putendl("a");
@@ -96,6 +96,7 @@ void		ft_read_op(j_list **head_a, j_list **head_b)
 		ft_putendl("b");
 		ft_print_stack(head_b);
 	}
+	//ft_strdel(&line);
 	ft_memdel((void**)&line);
 	//ft_print_stack(head_a);
 	if (ft_check_sort(head_a, head_b) == 1)
