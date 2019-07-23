@@ -6,68 +6,29 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/22 15:15:47 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/23 08:18:52 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "./libft/libft.h"
 
-int			ft_check_dup(j_list **head)
+/*void		ft_fill_args(j_list **current, char **av, int i)
 {
-	j_list	*to_check;
-	j_list	*ptr;
+	j_list	*prev;
 
-	to_check = *head;
-	while (to_check->next != NULL)
-	{
-		ptr = to_check->next;
-		while (ptr != NULL)
-		{
-			if (ptr->n == to_check->n)
-				return (-1);
-			ptr = ptr->next;
-		}
-		to_check = to_check->next;
-	}
-	return (1);
-}
-
-/*
-** ft_checkint: checks each character in the arguments given
-** if its a digit, check next; if not a digit, return error.
-*/
-
-int			ft_checkint(char **av)
-{
-	int	i;
-	int	j;
-
-	i = 1;
-	while (av[i])
-	{
-		j = 0;
-		while (av[i][j] != '\0' && (av[i][j] == ' ' || av[i][j] == '\t'))
-			j++;
-		if (av[i][j] == '\0')
-			return (0);
-		while (av[i][j] != '\0')
-		{
-			if (av[i][j] != '\0' && (av[i][j] == '-' || av[i][j] == '+'))
-				j++;
-			if (av[i][j] == '\0' || ft_isdigit(av[i][j]) == 0)
-				return (0);
-			while (av[i][j] != '\0' && ft_isdigit(av[i][j]))
-				j++;
-			if (av[i][j] != '\0' && av[i][j] != ' ' && av[i][j] != '\t')
-				return (0);
-			while (av[i][j] != '\0' && (av[i][j] == ' ' || av[i][j] == '\t'))
-				j++;
-		}
+	if (!(current->next = ft_newnode(&av[a][i])))
+		return (0);
+	if (av[a][i] == '-' || av[a][i] == '+')
 		i++;
-	}
-	return (1);
-}
+	while (av[a][i] != '\0' && ft_isdigit(av[a][i]))
+		i++;
+	while (av[a][i] != '\0' && av[a][i] == ' ')
+		i++;
+	prev = current;
+	current = current->next;
+	current->prev = prev;
+}*/
 
 /*
 ** ft_newnode: creates a new node at the end of list

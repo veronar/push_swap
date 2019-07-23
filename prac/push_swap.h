@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/22 16:39:34 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/23 08:10:34 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ int			ft_do_op(char *line, j_list **head_a, j_list **head_b);
 void		ft_read_op(j_list **head_a, j_list **head_b);
 void		ft_lst_del(j_list **head);
 int			ft_check_dup(j_list **head);
+void		ft_push_new_b(j_list **head_a, j_list **head_b);
+void		ft_push_new_a(j_list **head_a, j_list **head_b);
 
 void		ft_print_stack(j_list **head);
 void		ft_rev_print_stack(j_list **head);

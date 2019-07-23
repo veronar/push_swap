@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 10:50:38 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/22 16:42:24 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/23 07:59:58 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ j_list		*ft_newnode_b(int a)
 }
 
 /*
-** ft_init_list_b: only initialised by push_to_b
+** ft_init_list_b: only initialised by push_to_b / push_new_b
 */
 
 j_list		*ft_init_list_b(int b)
