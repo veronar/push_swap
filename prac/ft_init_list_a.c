@@ -6,29 +6,12 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/23 09:48:13 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/23 14:43:01 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "./libft/libft.h"
-
-/*void		ft_fill_args(j_list **current, char **av, int i)
-{
-	j_list	*prev;
-
-	if (!(current->next = ft_newnode(&av[a][i])))
-		return (0);
-	if (av[a][i] == '-' || av[a][i] == '+')
-		i++;
-	while (av[a][i] != '\0' && ft_isdigit(av[a][i]))
-		i++;
-	while (av[a][i] != '\0' && av[a][i] == ' ')
-		i++;
-	prev = current;
-	current = current->next;
-	current->prev = prev;
-}*/
 
 /*
 ** ft_newnode: creates a new node at the end of list
@@ -61,7 +44,6 @@ j_list		*ft_newnode(char *av)
 int			ft_fill_list(j_list **head, int ac, char **av, int a)
 {
 	j_list	*current;
-	j_list	*prev;
 	int		i;
 
 	current = *head;
@@ -80,9 +62,8 @@ int			ft_fill_list(j_list **head, int ac, char **av, int a)
 				i++;
 			while (av[a][i] != '\0' && av[a][i] == ' ')
 				i++;
-			prev = current;
+			current->next->prev = current;
 			current = current->next;
-			current->prev = prev;
 		}
 		a++;
 	}

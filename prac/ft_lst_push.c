@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 12:35:23 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/23 11:45:57 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/23 14:48:23 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void		ft_push_new_b(j_list **head_a, j_list **head_b)
 	}
 	*head_a = a_first->next;
 	a_first = *head_a;
-	a_first->prev = NULL;
+	free(a_first->prev);
 }
 
 /*
@@ -58,9 +58,7 @@ void		ft_push_new_a(j_list **head_a, j_list **head_b)
 	}
 	*head_b = b_first->next;
 	b_first = *head_b;
-	b_first->prev = NULL;
-	if (*head_b == NULL)
-		ft_lst_del(head_b);
+	free(b_first->prev);
 }
 
 /*
