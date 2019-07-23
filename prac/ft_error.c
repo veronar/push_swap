@@ -1,34 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/23 09:01:46 by vesingh          ###   ########.fr       */
+/*   Created: 2019/07/23 09:01:27 by vesingh           #+#    #+#             */
+/*   Updated: 2019/07/23 09:01:36 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "./libft/libft.h"
 
-int			main(int ac, char **av)
+void		ft_lst_del(j_list **head) /// Test!
 {
-	j_list	*head_a;
-	j_list	*head_b;
+	j_list	*temp1;
+	j_list	*temp2;
 
-	head_a = NULL;
-	head_b = NULL;
-	if (ac == 1)
-		return (0);
-	if (ft_init_list(ac, av, &head_a) == 0)
-		return (ft_error(&head_a));
-	head_b = NULL;
-	//ft_print_stack(&head_a);
-	//ft_lst_rev_rot(&head_a);
-	ft_read_op(&head_a, &head_b);
-	//ft_print_stack(&head_a);
+	if (*head == NULL)
+		return ;
+	temp1 = *head;
+	temp2 = temp1->next;
+	while (temp2 != NULL)
+	{
+		temp1->next = NULL;
+		ft_memdel((void**)&temp1);
+		temp1 = temp2;
+		temp2 = temp2->next;
+	}
+	free(temp1);
+	*head = NULL;
+}
+
+int			ft_error(j_list **head)
+{
+	ft_lst_del(head);
+	ft_putendl("Error");
 	//sleep(60);
-	return (0);
+	exit(1);
+	// return (-1);
 }
