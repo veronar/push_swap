@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/23 14:43:01 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/24 10:06:07 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,13 @@
 j_list		*ft_newnode(char *av)
 {
 	j_list	*new;
+	//long long	a;
+	//int			b;
 
+	//a = ft_atoi(av);
+	//b = ft_atoll(av);
+	if (a != b)
+		return (NULL);
 	if (!(new = ft_memalloc(sizeof(j_list))))
 		return (NULL);
 	new->prev = NULL;

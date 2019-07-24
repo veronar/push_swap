@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:02:59 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/23 14:56:13 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/24 09:21:47 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,21 @@ int			ft_check_dup(j_list **head)
 	return (1);
 }
 
+int			ft_check_int_inner(char **av, int *i, int *j)
+{
+	if (av[*i][*j] != '\0' && (av[*i][*j] == '-' || av[*i][*j] == '+'))
+		*j = *j + 1;
+	if (av[*i][*j] == '\0' || ft_isdigit(av[*i][*j]) == 0)
+		return (0);
+	while (av[*i][*j] != '\0' && ft_isdigit(av[*i][*j]))
+		*j = *j + 1;
+	if (av[*i][*j] != '\0' && av[*i][*j] != ' ' && av[*i][*j] != '\t')
+		return (0);
+	while (av[*i][*j] != '\0' && (av[*i][*j] == ' ' || av[*i][*j] == '\t'))
+		*j = *j + 1;
+	return (1);
+}
+
 /*
 ** ft_checkint: checks each character in the arguments given
 ** if its a digit, check next; if not a digit, return error.
@@ -58,16 +73,8 @@ int			ft_checkint(char **av)
 			return (0);
 		while (av[i][j] != '\0')
 		{
-			if (av[i][j] != '\0' && (av[i][j] == '-' || av[i][j] == '+'))
-				j++;
-			if (av[i][j] == '\0' || ft_isdigit(av[i][j]) == 0)
+			if (ft_check_int_inner(av, &i, &j) == 0)
 				return (0);
-			while (av[i][j] != '\0' && ft_isdigit(av[i][j]))
-				j++;
-			if (av[i][j] != '\0' && av[i][j] != ' ' && av[i][j] != '\t')
-				return (0);
-			while (av[i][j] != '\0' && (av[i][j] == ' ' || av[i][j] == '\t'))
-				j++;
 		}
 		i++;
 	}
