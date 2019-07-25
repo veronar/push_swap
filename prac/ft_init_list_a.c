@@ -6,12 +6,63 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/24 10:06:07 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/25 13:01:07 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "./libft/libft.h"
+
+char		*ft_strsub_white(char **str)
+{
+	int		len;
+	char	*ret;
+	int		j;
+	int 	i;
+
+	i = 0;
+	len = 0;
+	j = 0;
+	while (*str[i] != '\0')
+	{
+		if ((*str[i] == ' ' || *str[i] == '\t') && *str[i] != '\0')
+			break ;
+		len++;
+	}
+	if (!(ret = ft_memalloc(sizeof(char) * len + 1)))
+		return (NULL);
+	while (j < len)
+	{
+		ret[j] = *str[i];
+		i++;
+		j++;
+	}
+	ret[j] = '\0';
+	return (ret);
+}
+
+/*
+** ft_int_range: converts string to int, and then converts that int back
+** into a string, compare initial string and current string, if there
+** are differences then return NULL, means the strings are out of INT_MIN
+** and INT_MAX range
+*/
+
+int			ft_int_range(char **av)
+{
+	int		val;
+	char	*str;
+	char	*orig;
+
+	orig = ft_strsub_white(av);
+	val = ft_atoi(orig);
+	//ft_putnbr(val);
+	str = ft_itoa(val);
+	//ft_putendl(str);
+	if (ft_strcmp(*av, str) == 0)
+		return (1);
+	return (0);
+}
 
 /*
 ** ft_newnode: creates a new node at the end of list
@@ -21,12 +72,9 @@
 j_list		*ft_newnode(char *av)
 {
 	j_list	*new;
-	//long long	a;
-	//int			b;
+//	char	*str;
 
-	//a = ft_atoi(av);
-	//b = ft_atoll(av);
-	if (a != b)
+	if (ft_int_range(&av) == 0)
 		return (NULL);
 	if (!(new = ft_memalloc(sizeof(j_list))))
 		return (NULL);
