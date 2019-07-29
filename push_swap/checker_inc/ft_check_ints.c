@@ -6,12 +6,12 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:02:59 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:11:48 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/29 11:16:40 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 
 /*
 ** ft_checkdup: checks each number in the list for duplicates

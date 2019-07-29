@@ -6,12 +6,12 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 10:50:38 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:12:06 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/29 11:16:46 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 
 /*
 ** ft_newnode_b: creates the headnode (starts the list) for stack b

@@ -6,17 +6,25 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/07/29 11:10:28 by vesingh          ###   ########.fr        #
+#    Updated: 2019/07/29 11:16:14 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = checker
 
-SRC =	checker.c ft_lst_swap.c ft_lst_rotate.c ft_lst_push.c\
- 		ft_lst_rev_rotate.c ft_init_list_a.c ft_init_list_b.c\
-		ft_operands.c ft_check_ints.c ft_error.c ft_test.c
+SRC =	./checker_inc/checker.c\
+		./checker_inc/ft_lst_swap.c\
+		./checker_inc/ft_lst_rotate.c\
+		./checker_inc/ft_lst_push.c\
+ 		./checker_inc/ft_lst_rev_rotate.c\
+		./checker_inc/ft_init_list_a.c\
+		./checker_inc/ft_init_list_b.c\
+		./checker_inc/ft_operands.c\
+		./checker_inc/ft_check_ints.c\
+		./checker_inc/ft_error.c\
+		./checker_inc/ft_test.c\
 
-INCL = checker.h
+INCL = ./checker_inc/checker.h
 
 all: $(NAME)
 

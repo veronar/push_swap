@@ -6,12 +6,12 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:20:57 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:12:37 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/29 11:16:59 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 
 void		ft_print_stack(j_list **head)
 {

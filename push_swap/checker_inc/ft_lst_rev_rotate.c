@@ -6,12 +6,12 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 11:21:30 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:12:15 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/29 11:16:50 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 
 /*
 ** ft_lst_rev_rot: shifts UP all positions of the stack by 1
