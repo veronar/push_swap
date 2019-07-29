@@ -6,11 +6,11 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 11:21:30 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/23 14:47:08 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/29 11:12:15 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 #include "./libft/libft.h"
 
 /*

@@ -6,7 +6,7 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/07/29 11:07:24 by vesingh          ###   ########.fr        #
+#    Updated: 2019/07/29 11:10:28 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC =	checker.c ft_lst_swap.c ft_lst_rotate.c ft_lst_push.c\
  		ft_lst_rev_rotate.c ft_init_list_a.c ft_init_list_b.c\
 		ft_operands.c ft_check_ints.c ft_error.c ft_test.c
 
-INCL = push_swap.h
+INCL = checker.h
 
 all: $(NAME)
 

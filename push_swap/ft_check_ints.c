@@ -6,11 +6,11 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:02:59 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:06:00 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/29 11:11:48 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 #include "./libft/libft.h"
 
 /*
@@ -95,7 +95,7 @@ int			ft_checkint(char **av)
 ** long long range: [−9,223,372,036,854,775,807, +9,223,372,036,854,775,807]
 */
 
-long long		ft_atoll(char *str)
+long long	ft_atoll(char *str)
 {
 	long long	i;
 	long long	sign;
