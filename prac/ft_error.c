@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 09:01:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/23 14:44:42 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/29 10:41:51 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int			ft_error(j_list **head)
 {
 	ft_lst_del(head);
 	ft_putendl("Error");
+	//sleep(60);
 	exit(1);
 }

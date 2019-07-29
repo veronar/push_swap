@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/25 12:43:29 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/29 10:39:50 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,11 @@ int					ft_check_dup(j_list **head);
 void				ft_push_new_b(j_list **head_a, j_list **head_b);
 void				ft_push_new_a(j_list **head_a, j_list **head_b);
 int					ft_check_int_inner(char **av, int *i, int *j);
-int					ft_int_range(char **av);
+int					ft_fill_list_inner(char **av, int *a, int *i, \
+					j_list **new_node);
+void				ft_assign_newnode(j_list **head, j_list **current, \
+					j_list **new_node);
+long long			ft_atoll(char *str);
 
 void				ft_print_stack(j_list **head);
 void				ft_rev_print_stack(j_list **head);

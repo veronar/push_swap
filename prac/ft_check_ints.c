@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:02:59 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/25 13:01:11 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/29 10:39:46 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,13 @@ int			ft_check_dup(j_list **head)
 	}
 	return (1);
 }
+
+/*
+** ft_checkint: function was over 25 lines long,
+** added core part to new function for norminette.
+** basically iterates over characters that to check that they are either
+** '-' or '+' or digits.
+*/
 
 int			ft_check_int_inner(char **av, int *i, int *j)
 {
@@ -79,4 +86,38 @@ int			ft_checkint(char **av)
 		i++;
 	}
 	return (1);
+}
+
+/*
+** ft_atoll: converts string to 'long long'.
+** we can then use this to check if the given number is within the int range.
+** if it isnt within int, then error (see ft_newnode).
+** long long range: [−9,223,372,036,854,775,807, +9,223,372,036,854,775,807]
+*/
+
+long long		ft_atoll(char *str)
+{
+	long long	i;
+	long long	sign;
+	long long	result;
+
+	i = 0;
+	sign = 1;
+	result = 0;
+	while ((str[i] >= '\t' && str[i] <= '\r') || (str[i] == ' '))
+		i++;
+	if (str[i] == '-')
+		sign = -1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
+	{
+		result = (result * 10) + (str[i] - 48);
+		if ((((result * 10) + (str[i] - 48)) < result) && sign == 1)
+			return (-1);
+		if ((((result * 10) + (str[i] - 48)) < result) && sign == -1)
+			return (0);
+		i++;
+	}
+	return (result * sign);
 }
