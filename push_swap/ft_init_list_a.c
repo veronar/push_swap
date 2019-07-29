@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 10:39:44 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/29 11:06:53 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,13 +126,8 @@ int			ft_init_list(int ac, char **av, j_list **head)
 	current = NULL;
 	if (ft_checkint(av) != 1)
 		return (0);
-	//if (!(*head = ft_newnode(av[a])))
-	//	return (0);
-	//current = *head;
-	//a++;
 	if (ft_fill_list(head, ac, av, a) == 0)
 		return (0);
-	ft_print_stack(head);
 	if (ft_check_dup(head) == -1)
 		return (0);
 	return (1);

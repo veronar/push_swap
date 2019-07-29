@@ -6,7 +6,7 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/07/23 14:58:42 by vesingh          ###   ########.fr        #
+#    Updated: 2019/07/29 11:07:24 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ $(NAME):
 clean:
 	make clean -C ./libft
 
-fclean: clean
+fclean:
 	make fclean -C ./libft
 	rm -f $(NAME)
 

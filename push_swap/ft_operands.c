@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/23 14:49:15 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/07/29 11:06:40 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,10 +91,6 @@ void		ft_read_op(j_list **head_a, j_list **head_b)
 			ft_memdel((void **)&line);
 			ft_error(head_a);
 		}
-		ft_putendl("a");
-		ft_print_stack(head_a);
-		ft_putendl("b");
-		ft_print_stack(head_b);
 	}
 	ft_memdel((void**)&line);
 	if (ft_check_sort(head_a, head_b) == 1)
