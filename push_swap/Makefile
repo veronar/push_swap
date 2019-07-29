@@ -6,11 +6,11 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/07/29 11:16:14 by vesingh          ###   ########.fr        #
+#    Updated: 2019/07/29 11:21:13 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = checker
+NAME =	checker
 
 SRC =	./checker_inc/checker.c\
 		./checker_inc/ft_lst_swap.c\
@@ -24,7 +24,7 @@ SRC =	./checker_inc/checker.c\
 		./checker_inc/ft_error.c\
 		./checker_inc/ft_test.c\
 
-INCL = ./checker_inc/checker.h
+INCL =	./checker_inc/checker.h
 
 all: $(NAME)
 
