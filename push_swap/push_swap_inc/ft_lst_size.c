@@ -1,42 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_lst_size.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/23 09:01:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/30 10:02:27 by vesingh          ###   ########.fr       */
+/*   Created: 2019/07/30 10:20:31 by vesingh           #+#    #+#             */
+/*   Updated: 2019/07/30 14:13:30 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "../checker_inc/checker.h"
 #include "../libft/libft.h"
 
 /*
-** frees all nodes in a list
+** ft_lst_size: get size of list of arguments given
 */
 
-void		ft_lst_del(j_list **head)
+size_t		ft_lst_size(j_list **head)
 {
-	j_list	*current;
-	j_list	*second;
+	size_t	len;
+	j_list	*lst;
 
+	len = 0;
 	if (*head == NULL)
-		return ;
-	current = *head;
-	while (current != NULL)
+		return (0);
+	lst = *head;
+	while (lst != NULL)
 	{
-		second = current->next;
-		free(current);
-		current = second;
+		len++;
+		lst = lst->next;
 	}
-	*head = NULL;
-}
-
-int			ft_error(j_list **head)
-{
-	ft_lst_del(head);
-	ft_putendl("Error");
-	exit(1);
+	return (len);
 }
