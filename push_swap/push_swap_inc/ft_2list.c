@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_2lst.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/30 14:30:28 by vesingh          ###   ########.fr       */
+/*   Created: 2019/07/30 14:24:45 by vesingh           #+#    #+#             */
+/*   Updated: 2019/07/30 14:38:34 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include "../checker_inc/checker.h"
+#include "push_swap.h"
+#include "../libft/libft.h"
 
-size_t		ft_lst_size(j_list **head);
-int		ft_forsize(j_list **head_a, j_list **head_b);
+/*
+** ft_2lst: for list of size 2
+** if not sorted, sa, and return
+*/
 
-#endif
+void		ft_2list(j_list **head_a, j_list **head_b)
+{
+	if (ft_check_sort(head_a, head_b) == 1)
+		return ;
+	ft_lst_swap(head_a);
+	return ;
+}
