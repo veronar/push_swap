@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 14:36:22 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/02 08:46:08 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 14:50:49 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ void		ft_3list(t_dlist **head_a, t_dlist **head_b)
 	{
 		
 		ft_lst_swap(head_a);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/02 08:46:30 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 15:27:40 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,31 @@
 #include "../checker_inc/checker.h"
 #include "../libft/libft.h"
 
+void		ft_testing(t_dlist **head_a, t_dlist **head_b)
+{
+	size_t	len;
+	t_dlist	*small;
+	
+	(void)head_b;
+	ft_putstr("Stack A = ");
+	len = ft_lst_size(head_a);
+	ft_putnbr(len);
+	ft_putchar('\n');
+	small = ft_smallest(head_a);
+	ft_putnbr(small->n);
+	ft_putchar('\n');	
+	ft_small_to_top(head_a, head_b);
+	ft_print_stack(head_a);
+	ft_putchar('\n');
+	ft_print_stack(head_b);
+}
+
+
+
 int			main(int ac, char **av)
 {
 	t_dlist	*head_a;
 	t_dlist	*head_b;
-	size_t	len;
 
 	head_a = NULL;
 	head_b = NULL;
@@ -27,10 +47,6 @@ int			main(int ac, char **av)
 	if (ft_init_list(ac, av, &head_a) == 0)
 		return (ft_error(&head_a));
 	//ft_read_op(&head_a, &head_b);
-	ft_putstr("Stack A = ");
-	len = ft_lst_size(&head_a);
-	ft_putnbr(len);
-	ft_putchar('\n');
-	
+	ft_testing(&head_a, &head_b);	
 	return (0);
 }

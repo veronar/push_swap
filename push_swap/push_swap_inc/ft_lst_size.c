@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 10:20:31 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/02 08:46:16 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 14:49:36 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ size_t		ft_lst_size(t_dlist **head)
 ** ft_forsize: recieves the size of the list. performs sorting
 ** algorithm as per size of list. ie if 3, 5, 100 or 500
 */
-
+/* 
 int			ft_forsize(t_dlist **head_a, t_dlist **head_b)
 {
 	size_t	len;
@@ -62,4 +62,4 @@ int			ft_forsize(t_dlist **head_a, t_dlist **head_b)
 		return (ft_100list());
 	else
 		return (ft_500list());
-}
+}*/
