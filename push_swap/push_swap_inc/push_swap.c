@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/30 14:11:49 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 08:46:30 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 int			main(int ac, char **av)
 {
-	j_list	*head_a;
-	j_list	*head_b;
+	t_dlist	*head_a;
+	t_dlist	*head_b;
 	size_t	len;
 
 	head_a = NULL;

@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 14:36:22 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/30 14:42:46 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 08:46:08 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 ** push?
 */
 
-void		ft_3list(j_list **head_a, j_list **head_b)
+void		ft_3list(t_dlist **head_a, t_dlist **head_b)
 {
-	j_list	*top;
+	t_dlist	*top;
 
 	if (ft_check_sort(head_a, head_b) == 1)
 		return ;

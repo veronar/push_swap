@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 10:20:31 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/30 14:38:53 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 08:46:16 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 ** ft_lst_size: get size of list of arguments given
 */
 
-size_t		ft_lst_size(j_list **head)
+size_t		ft_lst_size(t_dlist **head)
 {
 	size_t	len;
-	j_list	*lst;
+	t_dlist	*lst;
 
 	len = 0;
 	if (*head == NULL)
@@ -40,7 +40,7 @@ size_t		ft_lst_size(j_list **head)
 ** algorithm as per size of list. ie if 3, 5, 100 or 500
 */
 
-int			ft_forsize(j_list **head_a, j_list **head_b)
+int			ft_forsize(t_dlist **head_a, t_dlist **head_b)
 {
 	size_t	len;
 

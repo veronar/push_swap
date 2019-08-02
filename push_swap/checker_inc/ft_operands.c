@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:16:56 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 08:45:35 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 ** if not sorted in ascending order, return 0;
 */
 
-int			ft_check_sort(j_list **head_a, j_list **head_b)
+int			ft_check_sort(t_dlist **head_a, t_dlist **head_b)
 {
-	j_list	*current;
-	j_list	*second;
+	t_dlist	*current;
+	t_dlist	*second;
 
 	if (*head_b != NULL)
 		return (0);
@@ -42,7 +42,7 @@ int			ft_check_sort(j_list **head_a, j_list **head_b)
 ** possible operations to be done. Executes operations.
 */
 
-int			ft_do_op(char *line, j_list **head_a, j_list **head_b)
+int			ft_do_op(char *line, t_dlist **head_a, t_dlist **head_b)
 {
 	if (ft_strcmp(line, "sa") == 0)
 		ft_lst_swap(head_a);
@@ -76,7 +76,7 @@ int			ft_do_op(char *line, j_list **head_a, j_list **head_b)
 ** calls ft_do_op to runs operations.
 */
 
-void		ft_read_op(j_list **head_a, j_list **head_b)
+void		ft_read_op(t_dlist **head_a, t_dlist **head_b)
 {
 	char	*line;
 

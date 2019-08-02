@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 10:50:38 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:16:46 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 08:40:21 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 ** ->next && ->prev are equal to NULL as it is head and only node
 */
 
-j_list		*ft_newnode_b(int a)
+t_dlist		*ft_newnode_b(int a)
 {
-	j_list	*new;
+	t_dlist	*new;
 
-	if (!(new = ft_memalloc(sizeof(j_list))))
+	if (!(new = ft_memalloc(sizeof(t_dlist))))
 		return (NULL);
 	new->prev = NULL;
 	new->n = a;
@@ -35,9 +35,9 @@ j_list		*ft_newnode_b(int a)
 ** ft_init_list_b: only initialised by push_to_b / push_new_b
 */
 
-j_list		*ft_init_list_b(int b)
+t_dlist		*ft_init_list_b(int b)
 {
-	j_list	*head_b;
+	t_dlist	*head_b;
 
 	if (!(head_b = ft_newnode_b(b)))
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:02:59 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:16:40 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 08:39:32 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 ** return -1 if there is duplicate
 */
 
-int			ft_check_dup(j_list **head)
+int			ft_check_dup(t_dlist **head)
 {
-	j_list	*to_check;
-	j_list	*ptr;
+	t_dlist	*to_check;
+	t_dlist	*ptr;
 
 	to_check = *head;
 	while (to_check->next != NULL)

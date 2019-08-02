@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:16:54 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 08:46:50 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 ** Pointer to start of specific stack must be called, ie. stack a or stack b.
 */
 
-void		ft_lst_swap(j_list **head)
+void		ft_lst_swap(t_dlist **head)
 {
-	j_list	*first;
-	j_list	*second;
+	t_dlist	*first;
+	t_dlist	*second;
 
 	first = *head;
 	if (first == NULL || first->next == NULL)
@@ -37,10 +37,10 @@ void		ft_lst_swap(j_list **head)
 ** Do nothing if there is only one or no elements).
 */
 
-void		ft_ss_swap_ab(j_list **head_a, j_list **head_b)
+void		ft_ss_swap_ab(t_dlist **head_a, t_dlist **head_b)
 {
-	j_list	*a;
-	j_list	*b;
+	t_dlist	*a;
+	t_dlist	*b;
 
 	a = *head_a;
 	b = *head_b;

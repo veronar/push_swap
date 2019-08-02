@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 11:21:30 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:16:50 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 08:44:48 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 ** first one becomes the last
 */
 
-void		ft_lst_rev_rot(j_list **head)
+void		ft_lst_rev_rot(t_dlist **head)
 {
-	j_list	*first;
-	j_list	*last;
-	j_list	*second_last;
+	t_dlist	*first;
+	t_dlist	*last;
+	t_dlist	*second_last;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return ;
@@ -43,7 +43,7 @@ void		ft_lst_rev_rot(j_list **head)
 ** first one becomes the last. Apply this to both stack a and stack b
 */
 
-void		ft_lst_rev_rot_ab(j_list **head_a, j_list **head_b)
+void		ft_lst_rev_rot_ab(t_dlist **head_a, t_dlist **head_b)
 {
 	if (!head_a && !head_b)
 		return ;

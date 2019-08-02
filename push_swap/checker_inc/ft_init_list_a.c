@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:16:44 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 08:39:53 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@
 ** populating it with the integer conversion of the relevant argument
 */
 
-j_list		*ft_newnode(char *av)
+t_dlist		*ft_newnode(char *av)
 {
-	j_list		*new;
+	t_dlist		*new;
 	long long	num;
 
 	num = ft_atoll(av);
 	if (num < -2147483648 || num > 2147483647)
 		return (NULL);
-	if (!(new = ft_memalloc(sizeof(j_list))))
+	if (!(new = ft_memalloc(sizeof(t_dlist))))
 		return (NULL);
 	new->prev = NULL;
 	new->n = ft_atoi(av);
@@ -40,7 +40,7 @@ j_list		*ft_newnode(char *av)
 ** in the given argument to malloc only for real numbers
 */
 
-int			ft_fill_list_inner(char **av, int *a, int *i, j_list **new_node)
+int			ft_fill_list_inner(char **av, int *a, int *i, t_dlist **new_node)
 {
 	if (!(*new_node = ft_newnode(&av[*a][*i])))
 		return (0);
@@ -59,8 +59,8 @@ int			ft_fill_list_inner(char **av, int *a, int *i, j_list **new_node)
 ** in the list.
 */
 
-void		ft_assign_newnode(j_list **head, j_list **current, \
-j_list **new_node)
+void		ft_assign_newnode(t_dlist **head, t_dlist **current, \
+t_dlist **new_node)
 {
 	if (*head == NULL)
 	{
@@ -86,11 +86,11 @@ j_list **new_node)
 ** else return error
 */
 
-int			ft_fill_list(j_list **head, int ac, char **av, int a)
+int			ft_fill_list(t_dlist **head, int ac, char **av, int a)
 {
-	j_list	*current;
+	t_dlist	*current;
 	int		i;
-	j_list	*new_node;
+	t_dlist	*new_node;
 
 	current = *head;
 	while (a < ac)
@@ -117,9 +117,9 @@ int			ft_fill_list(j_list **head, int ac, char **av, int a)
 ** 3. fills remainder of list with remainder of arguments converted to integers
 */
 
-int			ft_init_list(int ac, char **av, j_list **head)
+int			ft_init_list(int ac, char **av, t_dlist **head)
 {
-	j_list	*current;
+	t_dlist	*current;
 	int		a;
 
 	a = 1;

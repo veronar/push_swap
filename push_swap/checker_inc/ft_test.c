@@ -6,16 +6,16 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:20:57 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:16:59 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 08:45:42 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 #include "../libft/libft.h"
 
-void		ft_print_stack(j_list **head)
+void		ft_print_stack(t_dlist **head)
 {
-	j_list	*start;
+	t_dlist	*start;
 
 	start = *head;
 	while (start != NULL)
@@ -28,10 +28,10 @@ void		ft_print_stack(j_list **head)
 	ft_putchar('\n');
 }
 
-void		ft_rev_print_stack(j_list **head)
+void		ft_rev_print_stack(t_dlist **head)
 {
-	j_list	*end;
-	j_list	*start;
+	t_dlist	*end;
+	t_dlist	*start;
 
 	start = *head;
 	while (start->next != NULL)

@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 09:01:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/29 11:16:42 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/02 08:39:41 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 ** frees all nodes in a list
 */
 
-void		ft_lst_del(j_list **head)
+void		ft_lst_del(t_dlist **head)
 {
-	j_list	*current;
-	j_list	*second;
+	t_dlist	*current;
+	t_dlist	*second;
 
 	if (*head == NULL)
 		return ;
@@ -34,7 +34,7 @@ void		ft_lst_del(j_list **head)
 	*head = NULL;
 }
 
-int			ft_error(j_list **head)
+int			ft_error(t_dlist **head)
 {
 	ft_lst_del(head);
 	ft_putendl("Error");
