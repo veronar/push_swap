@@ -6,7 +6,7 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/08/02 14:52:21 by vesingh          ###   ########.fr        #
+#    Updated: 2019/08/05 10:05:50 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,9 @@ SRC =	push_swap.c\
 		ft_2list.c\
 		ft_3list.c\
 		ft_simplesort.c\
+		ft_push_ops1.c\
+		ft_push_ops2.c\
+		ft_push_ops3.c\
 		../checker_inc/ft_lst_swap.c\
 		../checker_inc/ft_lst_rotate.c\
 		../checker_inc/ft_lst_push.c\
