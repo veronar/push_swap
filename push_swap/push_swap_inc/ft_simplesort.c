@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 09:04:05 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/05 14:37:06 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/05 16:12:40 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,4 +121,6 @@ void		ft_sortsize(t_dlist **head_a, t_dlist **head_b)
 		ft_3list(head_a, head_b);
 	else if (lstlen <= 5)
 		ft_5list(head_a, head_b);
+	else
+		ft_frans_list(head_a, head_b);
 }

@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 10:47:13 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/05 14:34:48 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/05 16:12:05 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ int			ft_5list(t_dlist **head_a, t_dlist **head_b)
 		if (ft_small_top_5(head_a, head_b) == 1)
 		{
 			if (ft_check_sort(head_a, head_b) == 1)
-				break ;
+				return (1);
 		}
 	}
 	ft_3list(head_a, head_b);

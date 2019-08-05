@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/05 14:39:16 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/05 16:10:01 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ size_t		ft_small_pos(t_dlist **head_a, t_dlist *smallest);
 void		ft_2list(t_dlist **head_a, t_dlist **head_b);
 int			ft_3list(t_dlist **head_a, t_dlist **head_b);
 int			ft_5list(t_dlist **head_a, t_dlist **head_b);
+int			ft_frans_list(t_dlist **head_a, t_dlist **head_b);
 
 void		ft_push_swapa(t_dlist **head_a);
 void		ft_push_swapb(t_dlist **head_b);

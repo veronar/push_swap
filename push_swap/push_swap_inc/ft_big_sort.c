@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_big_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/05 15:47:47 by vesingh          ###   ########.fr       */
+/*   Created: 2019/08/05 16:09:27 by vesingh           #+#    #+#             */
+/*   Updated: 2019/08/05 16:20:31 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "../checker_inc/checker.h"
 #include "../libft/libft.h"
 
-int			main(int ac, char **av)
+int			ft_frans_list(t_dlist **head_a, t_dlist **head_b)
 {
-	t_dlist	*head_a;
-	t_dlist	*head_b;
-
-	head_a = NULL;
-	head_b = NULL;
-	if (ac == 1)
-		return (0);
-	if (ft_init_list(ac, av, &head_a) == 0)
-		return (ft_error(&head_a));
-	ft_sortsize(&head_a, &head_b);
-	ft_lst_del(&head_a);
-	ft_lst_del(&head_b);
-	return (0);
+	if (ft_check_sort(head_a, head_b) == 1)
+		return (1);
+	while (ft_lst_size(head_a) > 1)
+	{
+		if (ft_small_top_5(head_a, head_b) == 1)
+			break ;
+	}
+	while (*head_b != NULL)
+		ft_push_pa(head_a, head_b);
+	return (ft_check_sort(head_a, head_b));
 }
