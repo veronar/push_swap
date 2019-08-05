@@ -6,12 +6,33 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 09:04:05 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/05 14:18:19 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/05 14:37:06 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "../libft/libft.h"
+
+/*
+** ft_lst_size: get size of list of arguments given
+*/
+
+size_t		ft_lst_size(t_dlist **head)
+{
+	size_t	len;
+	t_dlist	*lst;
+
+	len = 0;
+	if (*head == NULL)
+		return (0);
+	lst = *head;
+	while (lst != NULL)
+	{
+		len++;
+		lst = lst->next;
+	}
+	return (len);
+}
 
 /*
 ** ft_is_ascending: checks if the list given is in ascending order

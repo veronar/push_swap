@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/05 13:07:34 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/05 14:39:16 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,5 @@ void		ft_push_rotab(t_dlist **head_a, t_dlist **head_b);
 void		ft_push_revrota(t_dlist **head_a);
 void		ft_push_revrotb(t_dlist **head_b);
 void		ft_push_revrotab(t_dlist **head_a, t_dlist **head_b);
-
-
-
-void		ft_testing(t_dlist **head_a, t_dlist **head_b);
 
 #endif
