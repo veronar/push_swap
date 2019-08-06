@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 09:01:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/02 08:39:41 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/06 13:33:34 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ void		ft_lst_del(t_dlist **head)
 int			ft_error(t_dlist **head)
 {
 	ft_lst_del(head);
-	ft_putendl("Error");
+	ft_putendl_fd("Error", 2);
 	exit(1);
 }
