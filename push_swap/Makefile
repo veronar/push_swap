@@ -6,7 +6,7 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/08/05 16:30:30 by vesingh          ###   ########.fr        #
+#    Updated: 2019/08/09 10:13:58 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,37 +58,32 @@ PUSH_FILES = $(addprefix $(P_DIR), $(PUSH_FUNC))
 CHECK_OBJECTS = $(CHECK_FILES:.c=.o)
 PUSH_OBJECTS = $(PUSH_FILES:.c=.o)
 
-INCL =	./checker_inc/checker.h
-
 all: $(CHECK) $(PUSH)
 
-$(CHECK): $(LIBRARY_NAME) $(CHECK_OBJECTS)
-	@gcc $(FLAGS) -o $(CHECK) $(CHECK_OBJECTS) $(LIBRARY)
-	@echo "\033[37mChecker Built!\033[0m"
+$(CHECK): $(LIBRARY_NAME) 
+	@gcc $(FLAGS) -o $(CHECK) $(CHECK_FILES) $(LIBRARY) 
+	@echo "\033[34mChecker Built!\033[0m"
 
-$(PUSH): $(LIBRARY_NAME) $(PUSH_OBJECTS)
-	@gcc $(FLAGS) -o $(PUSH) $(PUSH_OBJECTS) $(LIBRARY)
-	@echo "\033[37mPush_Swap Built!\033[0m"
+$(PUSH): $(LIBRARY_NAME) 
+	@gcc $(FLAGS) -o $(PUSH) $(PUSH_FILES) $(LIBRARY) 
+	@echo "\033[34mPush_Swap Built!\033[0m"
 
 $(LIBRARY_NAME):
-	make -C $(LIBRARY_DIR)
-
-%.o: %.c
-	@echo "\033[36mCreating Objects $@\033[0m"
-	@gcc $(FLAGS) -c $< -o $@
+	@make -C $(LIBRARY_DIR)
+	@echo "\033[34mLibft Built!\033[0m"
 
 clean:
-	@echo "\033[33mRemoving Objects...\033[0m"
+	@echo "\033[35mRemoving Objects...\033[0m"
 	@/bin/rm -f $(CHECK_OBJECTS)
 	@/bin/rm -f $(PUSH_OBJECTS)
 	@make clean -C $(LIBRARY_DIR)
-	@echo "\033[33mClean complete!\033[0m"
+	@echo "\033[35mClean complete!\033[0m"
 
 fclean:
-	@echo "\033[33mRemoving Objects...\033[0m"
+	@echo "\033[31mRemoving Objects...\033[0m"
 	@/bin/rm -f $(CHECK_OBJECTS) $(PUSH_OBJECTS)
 	@/bin/rm -f $(CHECK) $(PUSH)
 	@make fclean -C $(LIBRARY_DIR)
-	@echo "\033[33mFclean complete!\033[0m"
+	@echo "\033[31mFclean complete!\033[0m"
 
 re: fclean all

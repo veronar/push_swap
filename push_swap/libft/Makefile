@@ -6,7 +6,7 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/07/23 14:58:00 by vesingh          ###   ########.fr        #
+#    Updated: 2019/08/09 10:12:33 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,14 +21,14 @@ INCL = libft.h
 all: $(NAME)
 
 $(NAME):
-	gcc -c -Wall -Werror -Wextra $(SRC)
-	ar rc $(NAME) $(OBJ) $(INCL)
-	ranlib $(NAME)
+	@gcc -c -Wall -Werror -Wextra $(SRC)
+	@ar rc $(NAME) $(OBJ) $(INCL)
+	@ranlib $(NAME)
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all

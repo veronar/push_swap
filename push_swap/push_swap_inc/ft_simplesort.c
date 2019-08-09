@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 09:04:05 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/05 16:12:40 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/09 09:45:00 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ t_dlist		*ft_smallest(t_dlist **head_a)
 ** smallest number to the top of stack B by calling "pb"
 */
 
-int		ft_small_to_top(t_dlist **head_a, t_dlist **head_b)
+int			ft_small_to_top(t_dlist **head_a, t_dlist **head_b)
 {
 	t_dlist	*small;
 
