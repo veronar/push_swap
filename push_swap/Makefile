@@ -6,7 +6,7 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/08/09 10:20:37 by vesingh          ###   ########.fr        #
+#    Updated: 2019/08/09 10:56:26 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,28 +62,25 @@ all: $(NAME) $(PUSH)
 
 $(NAME): $(LIBRARY_NAME) 
 	@gcc $(FLAGS) -o $(NAME) $(CHECK_FILES) $(LIBRARY) 
-	@echo "\033[34mChecker Built!\033[0m"
+	@echo "Checker Built!"
 
 $(PUSH): $(LIBRARY_NAME) 
 	@gcc $(FLAGS) -o $(PUSH) $(PUSH_FILES) $(LIBRARY) 
-	@echo "\033[34mPush_Swap Built!\033[0m"
+	@echo "Push_Swap Built!"
 
 $(LIBRARY_NAME):
 	@make -C $(LIBRARY_DIR)
-	@echo "\033[34mLibft Built!\033[0m"
+	@echo "Libft Built!"
 
 clean:
-	@echo "\033[35mRemoving Objects...\033[0m"
-	@/bin/rm -f $(CHECK_OBJECTS)
-	@/bin/rm -f $(PUSH_OBJECTS)
+	@echo "Removing Objects..."
 	@make clean -C $(LIBRARY_DIR)
-	@echo "\033[35mClean complete!\033[0m"
+	@echo "Clean complete!"
 
 fclean:
-	@echo "\033[31mRemoving Objects...\033[0m"
-	@/bin/rm -f $(CHECK_OBJECTS) $(PUSH_OBJECTS)
+	@echo "Removing Objects..."
 	@/bin/rm -f $(NAME) $(PUSH)
 	@make fclean -C $(LIBRARY_DIR)
-	@echo "\033[31mFclean complete!\033[0m"
+	@echo "Fclean complete!"
 
 re: fclean all
