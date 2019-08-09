@@ -6,12 +6,12 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/08/09 10:16:45 by vesingh          ###   ########.fr        #
+#    Updated: 2019/08/09 10:20:37 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 PUSH = push_swap
-CHECK = checker
+NAME = checker
 
 C_DIR = ./checker_inc/
 P_DIR = ./push_swap_inc/
@@ -58,10 +58,10 @@ PUSH_FILES = $(addprefix $(P_DIR), $(PUSH_FUNC))
 CHECK_OBJECTS = $(CHECK_FILES:.c=.o)
 PUSH_OBJECTS = $(PUSH_FILES:.c=.o)
 
-all: $(CHECK) $(PUSH)
+all: $(NAME) $(PUSH)
 
-$(CHECK): $(LIBRARY_NAME) 
-	@gcc $(FLAGS) -o $(CHECK) $(CHECK_FILES) $(LIBRARY) 
+$(NAME): $(LIBRARY_NAME) 
+	@gcc $(FLAGS) -o $(NAME) $(CHECK_FILES) $(LIBRARY) 
 	@echo "\033[34mChecker Built!\033[0m"
 
 $(PUSH): $(LIBRARY_NAME) 
@@ -82,7 +82,7 @@ clean:
 fclean:
 	@echo "\033[31mRemoving Objects...\033[0m"
 	@/bin/rm -f $(CHECK_OBJECTS) $(PUSH_OBJECTS)
-	@/bin/rm -f $(CHECK) $(PUSH)
+	@/bin/rm -f $(NAME) $(PUSH)
 	@make fclean -C $(LIBRARY_DIR)
 	@echo "\033[31mFclean complete!\033[0m"
 

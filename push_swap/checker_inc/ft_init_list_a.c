@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/02 08:39:53 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/09 10:42:33 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,11 +119,9 @@ int			ft_fill_list(t_dlist **head, int ac, char **av, int a)
 
 int			ft_init_list(int ac, char **av, t_dlist **head)
 {
-	t_dlist	*current;
 	int		a;
 
 	a = 1;
-	current = NULL;
 	if (ft_checkint(av) != 1)
 		return (0);
 	if (ft_fill_list(head, ac, av, a) == 0)
