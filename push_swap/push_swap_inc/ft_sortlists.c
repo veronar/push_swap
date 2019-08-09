@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 10:47:13 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/05 16:12:05 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/08/09 10:45:01 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,10 +104,8 @@ int			ft_small_top_5(t_dlist **head_a, t_dlist **head_b)
 {
 	t_dlist	*small;
 	size_t	pos;
-	t_dlist	*temp;
 
 	small = ft_smallest(head_a);
-	temp = *head_a;
 	pos = ft_small_pos(head_a, small);
 	if (pos > (ft_lst_size(head_a) / 2))
 	{
