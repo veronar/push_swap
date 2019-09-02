@@ -6,7 +6,7 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/08/09 10:56:26 by vesingh          ###   ########.fr        #
+#    Updated: 2019/09/02 09:56:10 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,9 +54,6 @@ PUSH_FUNC = 	push_swap.c\
 
 CHECK_FILES = $(addprefix $(C_DIR), $(CHECK_FUNC))
 PUSH_FILES = $(addprefix $(P_DIR), $(PUSH_FUNC))
-
-CHECK_OBJECTS = $(CHECK_FILES:.c=.o)
-PUSH_OBJECTS = $(PUSH_FILES:.c=.o)
 
 all: $(NAME) $(PUSH)
 
