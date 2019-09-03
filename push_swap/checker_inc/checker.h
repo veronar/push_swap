@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/01 15:48:44 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/02 11:16:07 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ typedef struct		s_dlist
 {
 	struct s_dlist	*prev;
 	int				n;
+	int				norm;
 	struct s_dlist	*next;
 }					t_dlist;
 

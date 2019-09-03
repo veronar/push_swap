@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_sort_b.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/02 11:45:59 by vesingh          ###   ########.fr       */
+/*   Created: 2019/09/02 12:29:13 by vesingh           #+#    #+#             */
+/*   Updated: 2019/09/02 13:48:24 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "../checker_inc/checker.h"
-#include "../libft/libft.h"
 
-int			main(int ac, char **av)
+void	ft_sort_b(t_dlist **head_a, t_dlist **head_b)
 {
-	t_dlist	*head_a;
-	t_dlist	*head_b;
+	int	b_len;
+	int i;
 
-	head_a = NULL;
-	head_b = NULL;
-	if (ac == 1)
-		return (0);
-	if (ft_init_list(ac, av, &head_a) == 0)
-		return (ft_error(&head_a));
-	ft_addnorms(&head_a);
-	ft_print_stacknorm(&head_a);
-	ft_sortsize(&head_a, &head_b);
-	ft_lst_del(&head_a);
-	ft_lst_del(&head_b);
-	return (0);
+	if (ft_is_descending(head_b) == 1)
+	{
+		//while (*head_b != NULL)
+		//	ft_push_pa(head_a, head_b);
+		return ;
+	}
+	b_len = ft_lst(head_b);
+	i = b_len;
+	while (i > b_len - 5)
+	{
+		ft_big_to_top(head_b);
+	}
 }

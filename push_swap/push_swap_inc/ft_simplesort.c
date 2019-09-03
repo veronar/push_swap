@@ -3,35 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_simplesort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 09:04:05 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/09 09:45:00 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/03 10:25:26 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "../libft/libft.h"
 
-/*
-** ft_lst_size: get size of list of arguments given
-*/
-
-size_t		ft_lst_size(t_dlist **head)
+int			ft_is_descending(t_dlist **head)
 {
-	size_t	len;
-	t_dlist	*lst;
+	t_dlist	*current;
+	t_dlist	*second;
 
-	len = 0;
-	if (*head == NULL)
-		return (0);
-	lst = *head;
-	while (lst != NULL)
+	current = *head;
+	second = current->next;
+	while (second != NULL)
 	{
-		len++;
-		lst = lst->next;
+		if (second->n > current->n)
+			return (0);
+		current = current->next;
+		second = second->next;
 	}
-	return (len);
+	return (1);
 }
 
 /*
@@ -56,27 +52,6 @@ int			ft_is_ascending(t_dlist **head)
 		second = second->next;
 	}
 	return (1);
-}
-
-/*
-** ft_smallest: finds the node with the smallest integer in it.
-** returns pointer to said node.
-*/
-
-t_dlist		*ft_smallest(t_dlist **head_a)
-{
-	t_dlist	*ret;
-	t_dlist	*temp;
-
-	ret = *head_a;
-	temp = ret;
-	while (ret != NULL)
-	{
-		if (ret->n < temp->n)
-			temp = ret;
-		ret = ret->next;
-	}
-	return (temp);
 }
 
 /*
@@ -122,5 +97,5 @@ void		ft_sortsize(t_dlist **head_a, t_dlist **head_b)
 	else if (lstlen <= 5)
 		ft_5list(head_a, head_b);
 	else
-		ft_frans_list(head_a, head_b);
+		ft_big_list(head_a, head_b, lstlen);
 }

@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:20:57 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/02 08:45:42 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/02 11:39:46 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,25 @@ void		ft_rev_print_stack(t_dlist **head)
 		ft_putnbr(end->n);
 		ft_putchar('\n');
 		end = end->prev;
+	}
+	ft_putchar('\n');
+}
+
+void		ft_print_stacknorm(t_dlist **head)
+{
+	t_dlist	*start;
+
+	start = *head;
+	while (start != NULL)
+	{
+		ft_putstr("n = ");
+		ft_putnbr(start->n);
+		ft_putchar('\n');
+		ft_putstr("norm = ");
+		ft_putnbr(start->norm);
+		ft_putchar('\n');
+		ft_putchar('\n');
+		start = start->next;
 	}
 	ft_putchar('\n');
 }
