@@ -43,6 +43,11 @@ t_dlist		*ft_largest(t_dlist **head)
 	return (temp);
 }
 
+/*
+** ft_large_pos: finds the position of the node with the largest integer
+** in it, returns the int value of the its position in the list.
+*/
+
 int		ft_large_pos(t_dlist **head)
 {
 	t_dlist	*start;

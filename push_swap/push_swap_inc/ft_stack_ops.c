@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stack_ops.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: modo <modo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 11:30:55 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/02 11:42:39 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/03 14:17:49 by modo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t		ft_lst_size(t_dlist **head)
 }
 
 /*
-**
+** ft_addnorms: adds the norm value to each number based on the integer value
 */
 
 void		ft_addnorms(t_dlist **head_a)

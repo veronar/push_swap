@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: modo <modo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/02 11:45:59 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/03 14:11:29 by modo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int			main(int ac, char **av)
 	if (ft_init_list(ac, av, &head_a) == 0)
 		return (ft_error(&head_a));
 	ft_addnorms(&head_a);
-	ft_print_stacknorm(&head_a);
+//	ft_print_stacknorm(&head_a);
 	ft_sortsize(&head_a, &head_b);
 	ft_lst_del(&head_a);
 	ft_lst_del(&head_b);

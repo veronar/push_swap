@@ -6,7 +6,7 @@
 /*   By: modo <modo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 11:58:43 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/03 13:59:54 by modo             ###   ########.fr       */
+/*   Updated: 2019/09/03 14:25:55 by modo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range)
 
 	pos = 0;
 	lstlen = ft_lst_size(head_b);
-	
 	while (*head_b != NULL)
 	{
 		while (i > 0 && i >= range - 5)
@@ -40,23 +39,6 @@ void	ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range)
 	}
 }
 
-int		ft_norm_pos(t_dlist **head_a, int norm)
-{
-	t_dlist	*start;
-	int		pos;
-	
-	start = *head_a;
-	pos = 0;
-	while (start != NULL)
-	{
-		if (start->norm == norm)
-			break ;
-		pos++;
-		start = start->next;
-	}
-	return (pos);
-}
-
 void	ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 {
 	t_dlist	*stack_a;
@@ -65,7 +47,6 @@ void	ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 
 	i = 1;
 	range = 0;
-	//stack_a = *head_a;
 	while (*head_a != NULL)
 	{
 		range = range + 20;
@@ -91,39 +72,6 @@ void	ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 		}
 	}
 	i--;
+	printf("i = %i\n", i);
 	ft_pushback_b(head_a, head_b, i, range);
-}
-
-int		ft_normlargepos(t_dlist **head, int large)
-{
-	t_dlist	*start;
-	int		pos;
-
-	start= *head;
-	pos = 1;
-	while (start != NULL)
-	{
-		if (start->norm == large)
-			break ;
-		start = start->next;
-		pos++;
-	}
-	return (pos);
-}
-
-t_dlist		*ft_normlarge(t_dlist **head, int large)
-{
-	t_dlist	*start;
-	int		pos;
-
-	start= *head;
-	pos = 1;
-	while (start != NULL)
-	{
-		if (start->norm == large)
-			break ;
-		start = start->next;
-		pos++;
-	}
-	return (start);
 }
