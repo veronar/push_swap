@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/02 08:46:50 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/04 13:34:43 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void		ft_lst_swap(t_dlist **head)
 		return ;
 	second = first->next;
 	ft_swap(&first->n, &second->n);
+	ft_swap(&first->norm, &second->norm);
 	return ;
 }
 
