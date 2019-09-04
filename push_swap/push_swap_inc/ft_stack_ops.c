@@ -3,35 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stack_ops.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 11:30:55 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 06:25:48 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/04 12:50:52 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*
-** ft_lst_size: get size of list of arguments given
-*/
-
-size_t		ft_lst_size(t_dlist **head)
-{
-	size_t	len;
-	t_dlist	*lst;
-
-	len = 0;
-	if (*head == NULL)
-		return (0);
-	lst = *head;
-	while (lst != NULL)
-	{
-		len++;
-		lst = lst->next;
-	}
-	return (len);
-}
 
 /*
 ** ft_smallest: finds the node with the smallest integer in it.

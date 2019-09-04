@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 10:47:13 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/09 10:45:01 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/04 11:45:18 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ int			ft_3list(t_dlist **head_a, t_dlist **head_b)
 ** index of that number in the list.
 */
 
-size_t		ft_small_pos(t_dlist **head_a, t_dlist *smallest)
+int		ft_small_pos(t_dlist **head_a, t_dlist *smallest)
 {
-	size_t	pos;
+	int		pos;
 	t_dlist	*temp;
 
 	temp = *head_a;
@@ -103,7 +103,7 @@ size_t		ft_small_pos(t_dlist **head_a, t_dlist *smallest)
 int			ft_small_top_5(t_dlist **head_a, t_dlist **head_b)
 {
 	t_dlist	*small;
-	size_t	pos;
+	int	pos;
 
 	small = ft_smallest(head_a);
 	pos = ft_small_pos(head_a, small);

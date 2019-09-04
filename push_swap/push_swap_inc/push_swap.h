@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 06:54:44 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/04 12:52:47 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 # include "../checker_inc/checker.h"
 
-size_t		ft_lst_size(t_dlist **head);
+//int			ft_lst_size(t_dlist **head);
 int			ft_forsize(t_dlist **head_a, t_dlist **head_b);
 t_dlist		*ft_smallest(t_dlist **head_a);
 int			ft_small_to_top(t_dlist **head_a, t_dlist **head_b);
@@ -22,12 +22,12 @@ int			ft_small_top_5(t_dlist **head_a, t_dlist **head_b);
 int			ft_is_ascending(t_dlist **head);
 int			ft_is_descending(t_dlist **head);
 void		ft_sortsize(t_dlist **head_a, t_dlist **head_b);
-size_t		ft_small_pos(t_dlist **head_a, t_dlist *smallest);
+int			ft_small_pos(t_dlist **head_a, t_dlist *smallest);
 
 void		ft_2list(t_dlist **head_a, t_dlist **head_b);
 int			ft_3list(t_dlist **head_a, t_dlist **head_b);
 int			ft_5list(t_dlist **head_a, t_dlist **head_b);
-int			ft_big_list(t_dlist **head_a, t_dlist **head_b, size_t lstlen);
+int			ft_big_list(t_dlist **head_a, t_dlist **head_b, int lstlen);
 void		ft_addnorms(t_dlist **head_a);
 
 //t_dlist		*ft_normlarge(t_dlist **head, int large);

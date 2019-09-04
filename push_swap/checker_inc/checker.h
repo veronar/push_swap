@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/02 11:16:07 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/04 12:51:49 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void				ft_lst_rot(t_dlist **head);
 void				ft_lst_rot_ab(t_dlist **head_a, t_dlist **head_b);
 void				ft_lst_rev_rot(t_dlist **head);
 void				ft_lst_rev_rot_ab(t_dlist **head_a, t_dlist **head_b);
-t_dlist				*ft_init_list_b(int a);
-t_dlist				*ft_newnode_b(int a);
+t_dlist				*ft_init_list_b(int a, int norm);
+t_dlist				*ft_newnode_b(int a, int norm);
 int					ft_check_sort(t_dlist **head_a, t_dlist **head_b);
 int					ft_do_op(char *line, t_dlist **head_a, t_dlist **head_b);
 void				ft_read_op(t_dlist **head_a, t_dlist **head_b);
@@ -50,6 +50,8 @@ int					ft_fill_list_inner(char **av, int *a, int *i, \
 void				ft_assign_newnode(t_dlist **head, t_dlist **current, \
 					t_dlist **new_node);
 long long			ft_atoll(char *str);
+void				ft_addnorms_checker(t_dlist **head_a);
+int			ft_lst_size(t_dlist **head);
 
 void				ft_print_stack(t_dlist **head);
 void				ft_rev_print_stack(t_dlist **head);

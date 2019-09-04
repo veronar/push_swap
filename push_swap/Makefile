@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/09/04 06:38:22 by marvin           ###   ########.fr        #
+#    Updated: 2019/09/04 12:40:19 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ CHECK_FUNC =	checker.c\
 				ft_check_ints.c\
 				ft_error.c\
 				ft_test.c\
+				ft_norm_checker.c\
 
 PUSH_FUNC = 	push_swap.c\
 				ft_sortlists.c\
@@ -55,6 +56,7 @@ PUSH_FUNC = 	push_swap.c\
 				../checker_inc/ft_check_ints.c\
 				../checker_inc/ft_error.c\
 				../checker_inc/ft_test.c\
+				../checker_inc/ft_norm_checker.c\
 
 CHECK_FILES = $(addprefix $(C_DIR), $(CHECK_FUNC))
 PUSH_FILES = $(addprefix $(P_DIR), $(PUSH_FUNC))

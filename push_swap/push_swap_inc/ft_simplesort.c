@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_simplesort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 09:04:05 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 06:54:39 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/04 11:47:37 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int			ft_small_to_top(t_dlist **head_a, t_dlist **head_b)
 
 void		ft_sortsize(t_dlist **head_a, t_dlist **head_b)
 {
-	size_t	lstlen;
+	int	lstlen;
 
 	lstlen = ft_lst_size(head_a);
 	if (lstlen == 0)

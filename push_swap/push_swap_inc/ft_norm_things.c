@@ -27,11 +27,11 @@ void		ft_addnorms(t_dlist **head_a)
 	}
 }
 
-int		ft_norm_pos(t_dlist **head_a, int norm)
+/*int		ft_norm_pos(t_dlist **head_a, int norm)
 {
 	t_dlist	*start;
 	int		pos;
-	
+
 	start = *head_a;
 	pos = 0;
 	while (start != NULL)
@@ -42,25 +42,25 @@ int		ft_norm_pos(t_dlist **head_a, int norm)
 		start = start->next;
 	}
 	return (pos);
-}
+}*/
 
 int		ft_normlargepos(t_dlist **head, int large)
 {
 	t_dlist	*start;
 	int		pos;
-    int     i;
+	int		i;
 
-	start= *head;
+	start = *head;
 	pos = 0;
-    i = 0;
+	i = 0;
 	while (start != NULL)
 	{
 		if (start->norm == large)
 		{
-            pos = i;	
-            break ;
-        }
-        start = start->next;
+			pos = i;
+			break ;
+		}
+		start = start->next;
 		i++;
 	}
 	return (pos);

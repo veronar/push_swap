@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 12:35:23 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/19 14:11:12 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/04 12:49:57 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void		ft_push_new_b(t_dlist **head_a, t_dlist **head_b)
 	t_dlist	*b_first;
 
 	a_first = *head_a;
-	b_first = ft_init_list_b(a_first->n);
+	b_first = ft_init_list_b(a_first->n, a_first->norm);
 	*head_b = b_first;
 	if (a_first->next == NULL)
 	{
@@ -49,7 +49,7 @@ void		ft_push_new_a(t_dlist **head_a, t_dlist **head_b)
 	t_dlist	*b_first;
 
 	b_first = *head_b;
-	a_first = ft_init_list_b(b_first->n);
+	a_first = ft_init_list_b(b_first->n, b_first->norm);
 	*head_a = a_first;
 	if (b_first->next == NULL)
 	{

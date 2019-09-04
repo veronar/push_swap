@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 11:58:43 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 11:18:28 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/04 12:53:53 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_rb_rrb(t_dlist **head_b, int pos)
 	if (pos > lstlen / 2)
 	{
 		pos = lstlen - pos;
-		while (pos)
+		while (pos != 0)
 		{
 			ft_push_revrotb(head_b);
 			pos--;
@@ -28,7 +28,7 @@ void	ft_rb_rrb(t_dlist **head_b, int pos)
 	}
 	else if (pos <= lstlen / 2)
 	{
-		while (pos)
+		while (pos != 0)
 		{
 			ft_push_rotb(head_b);
 			pos--;
@@ -68,9 +68,11 @@ void	ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 		{
 			if (*head_a == NULL)
 				break ;
+			//printf("head_a norm = %i\n", (*head_a)->norm);
 			if ((*head_a)->norm <= range)
 			{
 				ft_push_pb(head_a, head_b);
+				//printf("head_b norm = %i\n", (*head_b)->norm);
 				i++;
 			}
 			else
@@ -78,5 +80,6 @@ void	ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 		}
 	}
 	i--;
+	//ft_print_stacknorm(head_b);
 	ft_pushback_b(head_a, head_b, i, range);
 }
