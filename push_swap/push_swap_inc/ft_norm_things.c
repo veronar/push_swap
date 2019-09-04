@@ -1,6 +1,32 @@
 
 #include "push_swap.h"
 
+/*
+** ft_addnorms: adds the norm value to each number based on the integer value
+*/
+
+void		ft_addnorms(t_dlist **head_a)
+{
+	t_dlist	*start;
+	t_dlist	*second;
+	int		norm;
+
+	start = *head_a;
+	while (start != NULL)
+	{
+		norm = ft_lst_size(head_a);
+		start->norm = norm;
+		second = *head_a;
+		while (second != NULL)
+		{
+			if (start->n < second->n)
+				start->norm--;
+			second = second->next;
+		}
+		start = start->next;
+	}
+}
+
 int		ft_norm_pos(t_dlist **head_a, int norm)
 {
 	t_dlist	*start;
@@ -40,6 +66,7 @@ int		ft_normlargepos(t_dlist **head, int large)
 	return (pos);
 }
 
+/*
 t_dlist		*ft_normlarge(t_dlist **head, int large)
 {
 	t_dlist	*start;
@@ -55,4 +82,4 @@ t_dlist		*ft_normlarge(t_dlist **head, int large)
 		pos++;
 	}
 	return (start);
-}
+}*/

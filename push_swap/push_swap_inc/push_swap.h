@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: modo <modo@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/03 13:58:38 by modo             ###   ########.fr       */
+/*   Updated: 2019/09/04 06:54:44 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,13 @@ int			ft_3list(t_dlist **head_a, t_dlist **head_b);
 int			ft_5list(t_dlist **head_a, t_dlist **head_b);
 int			ft_big_list(t_dlist **head_a, t_dlist **head_b, size_t lstlen);
 void		ft_addnorms(t_dlist **head_a);
-void	ft_100_sort(t_dlist **head_a, t_dlist **head_b);
-t_dlist		*ft_normlarge(t_dlist **head, int large);
+
+//t_dlist		*ft_normlarge(t_dlist **head, int large);
 int		ft_normlargepos(t_dlist **head, int large);
 int		ft_norm_pos(t_dlist **head_a, int norm);
 void	ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range);
+void	ft_100_sort(t_dlist **head_a, t_dlist **head_b);
+void	ft_500_sort(t_dlist **head_a, t_dlist **head_b);
 
 
 void		ft_push_swapa(t_dlist **head_a);

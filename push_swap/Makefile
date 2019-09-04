@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: modo <modo@student.42.fr>                  +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/09/03 14:19:34 by modo             ###   ########.fr        #
+#    Updated: 2019/09/04 06:38:22 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,8 +42,8 @@ PUSH_FUNC = 	push_swap.c\
 				ft_push_ops3.c\
 				ft_big_sort.c\
 				ft_stack_ops.c\
-				ft_small_large.c\
 				ft_100_sort.c\
+				ft_500_sort.c\
 				ft_norm_things.c\
 				../checker_inc/ft_lst_swap.c\
 				../checker_inc/ft_lst_rotate.c\
