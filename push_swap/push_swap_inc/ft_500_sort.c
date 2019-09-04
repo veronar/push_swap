@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/05 16:09:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 13:13:23 by vesingh          ###   ########.fr       */
+/*   Created: 2019/09/04 13:27:16 by vesingh           #+#    #+#             */
+/*   Updated: 2019/09/04 13:28:25 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_500_sort(t_dlist **head_a, t_dlist **head_b)
 				ft_push_pb(head_a, head_b);
 				i++;
 			}
-			else 
+			else
 				ft_push_rota(head_a);
 		}
 	}

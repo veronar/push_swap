@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 12:51:49 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/04 13:18:46 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,9 @@ int					ft_fill_list_inner(char **av, int *a, int *i, \
 void				ft_assign_newnode(t_dlist **head, t_dlist **current, \
 					t_dlist **new_node);
 long long			ft_atoll(char *str);
+
 void				ft_addnorms_checker(t_dlist **head_a);
-int			ft_lst_size(t_dlist **head);
+int					ft_lst_size(t_dlist **head);
 
 void				ft_print_stack(t_dlist **head);
 void				ft_rev_print_stack(t_dlist **head);

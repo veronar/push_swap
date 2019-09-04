@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 12:49:57 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/04 13:18:02 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int			main(int ac, char **av)
 		return (0);
 	if (ft_init_list(ac, av, &head_a) == 0)
 		return (ft_error(&head_a));
-	ft_addnorms_checker(&head_a);	
+	ft_addnorms_checker(&head_a);
 	ft_read_op(&head_a, &head_b);
 	return (0);
 }
