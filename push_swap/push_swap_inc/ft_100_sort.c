@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_100_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 11:58:43 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 06:23:31 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/04 11:18:28 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ void	ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range)
 
 void	ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 {
-	t_dlist	*stack_a;
 	int		i;
 	int		range;
 
@@ -67,15 +66,14 @@ void	ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 		range = range + 20;
 		while (i <= range)
 		{
-			stack_a = *head_a;
-			if (stack_a == NULL)
+			if (*head_a == NULL)
 				break ;
-			if (stack_a->norm <= range)
+			if ((*head_a)->norm <= range)
 			{
 				ft_push_pb(head_a, head_b);
 				i++;
 			}
-			else 
+			else
 				ft_push_rota(head_a);
 		}
 	}
