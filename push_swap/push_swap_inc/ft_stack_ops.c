@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 11:30:55 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 12:50:52 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/04 13:17:37 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ t_dlist		*ft_largest(t_dlist **head)
 ** in it, returns the int value of the its position in the list.
 */
 
-int		ft_large_pos(t_dlist **head)
+int			ft_large_pos(t_dlist **head)
 {
 	t_dlist	*start;
 	t_dlist	*large;
 	int		pos;
-	
+
 	start = *head;
 	large = ft_largest(head);
 	pos = 1;
@@ -77,4 +77,3 @@ int		ft_large_pos(t_dlist **head)
 	}
 	return (pos);
 }
-

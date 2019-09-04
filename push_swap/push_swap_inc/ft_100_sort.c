@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 11:58:43 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 12:53:53 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/04 13:13:11 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,9 @@ void	ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 		{
 			if (*head_a == NULL)
 				break ;
-			//printf("head_a norm = %i\n", (*head_a)->norm);
 			if ((*head_a)->norm <= range)
 			{
 				ft_push_pb(head_a, head_b);
-				//printf("head_b norm = %i\n", (*head_b)->norm);
 				i++;
 			}
 			else
@@ -80,6 +78,5 @@ void	ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 		}
 	}
 	i--;
-	//ft_print_stacknorm(head_b);
 	ft_pushback_b(head_a, head_b, i, range);
 }

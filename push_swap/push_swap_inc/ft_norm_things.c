@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_norm_things.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/04 13:18:22 by vesingh           #+#    #+#             */
+/*   Updated: 2019/09/04 13:18:27 by vesingh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -27,24 +38,12 @@ void		ft_addnorms(t_dlist **head_a)
 	}
 }
 
-/*int		ft_norm_pos(t_dlist **head_a, int norm)
-{
-	t_dlist	*start;
-	int		pos;
+/*
+** ft_normlargepos: takes the large norm value in,, iterates through the
+** stack, and returns the position of the node with that norm value.
+*/
 
-	start = *head_a;
-	pos = 0;
-	while (start != NULL)
-	{
-		if (start->norm == norm)
-			break ;
-		pos++;
-		start = start->next;
-	}
-	return (pos);
-}*/
-
-int		ft_normlargepos(t_dlist **head, int large)
+int			ft_normlargepos(t_dlist **head, int large)
 {
 	t_dlist	*start;
 	int		pos;
@@ -65,21 +64,3 @@ int		ft_normlargepos(t_dlist **head, int large)
 	}
 	return (pos);
 }
-
-/*
-t_dlist		*ft_normlarge(t_dlist **head, int large)
-{
-	t_dlist	*start;
-	int		pos;
-
-	start= *head;
-	pos = 1;
-	while (start != NULL)
-	{
-		if (start->norm == large)
-			break ;
-		start = start->next;
-		pos++;
-	}
-	return (start);
-}*/
