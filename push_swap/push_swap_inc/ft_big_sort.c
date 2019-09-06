@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 16:09:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/06 09:50:55 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/06 10:05:21 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int			ft_big_list(t_dlist **head_a, t_dlist **head_b, int lstlen)
 ** times, else if it in the first half, rotate B x times.
 */
 
-void	ft_rb_rrb(t_dlist **head_b, int pos)
+void		ft_rb_rrb(t_dlist **head_b, int pos)
 {
 	int	lstlen;
 
@@ -75,7 +75,7 @@ void	ft_rb_rrb(t_dlist **head_b, int pos)
 ** as i.
 */
 
-void	ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range)
+void		ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range)
 {
 	int	pos;
 
@@ -101,7 +101,7 @@ void	ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range)
 ** This way we are kinda of sorting the list by chunks of 20 numbers.
 */
 
-void	ft_100_sort(t_dlist **head_a, t_dlist **head_b)
+void		ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 {
 	int		i;
 	int		range;
@@ -133,7 +133,7 @@ void	ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 ** number, instead of 20 at a time, we now check 44 at a time.
 */
 
-void	ft_500_sort(t_dlist **head_a, t_dlist **head_b)
+void		ft_500_sort(t_dlist **head_a, t_dlist **head_b)
 {
 	t_dlist	*stack_a;
 	int		i;
