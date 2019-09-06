@@ -6,7 +6,7 @@
 #    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/09/04 12:40:19 by vesingh          ###   ########.fr        #
+#    Updated: 2019/09/06 09:58:45 by vesingh          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,9 +43,6 @@ PUSH_FUNC = 	push_swap.c\
 				ft_push_ops3.c\
 				ft_big_sort.c\
 				ft_stack_ops.c\
-				ft_100_sort.c\
-				ft_500_sort.c\
-				ft_norm_things.c\
 				../checker_inc/ft_lst_swap.c\
 				../checker_inc/ft_lst_rotate.c\
 				../checker_inc/ft_lst_push.c\
