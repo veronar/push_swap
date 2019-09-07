@@ -87,4 +87,4 @@ the last one.
   ```
 
   ## Shout-out
-  Thanks to @FWMoor & @CharlieDeltaZA for major help on optimising my sorting algorithm for large stacks!
+  Thanks to [@FWMoor](https://github.com/FWMoor) & [@CharlieDeltaZA](https://github.com/CharlieDeltaZA) for major help in optimising my sorting algorithm for large stacks!
