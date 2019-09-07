@@ -9,7 +9,7 @@ This project will make you sort data on a stack, with a limited set of instructi
 ## **Objective**
 The Push_swap project is a very simple and highly effective algorithm project: data will need to be sorted. You have at your disposal a set of int values, 2 stacks and a set of instructions to manipulate both stacks.  
   
-The goal ? Write 2 programs in C:  
+The goal? Write 2 programs in C:  
 - The first, named checker which takes integer arguments and reads instructions on
 the standard output. Once read, checker executes them and displays `OK` if integers
 are sorted. Otherwise, it will display `KO`.
@@ -78,5 +78,5 @@ the last one.
   ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l
   ```
 
-  ### Shout-out
+  ## Shout-out
   Thanks to @FWMoor & @CharlieDeltaZA for major help on optimising my sorting algorithm for large stacks!
