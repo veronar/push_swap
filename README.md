@@ -7,13 +7,6 @@ Because Swap_push isn’t as natural
 ### **Description**
 This project will make you sort data on a stack, with a limited set of instructions, using the lowest possible number of actions. To succeed you’ll have to manipulate various types of algorithms and choose the one (of many) most appropriate solution for an optimized data sorting.
   
-Allowed functions:
-- write
-- read
-- malloc
-- free
-- exit
-
 ## **Objective**
 The Push_swap project is a very simple and highly effective algorithm project: data will need to be sorted. You have at your disposal a set of int values, 2 stacks and a set of instructions to manipulate both stacks.  
   
@@ -23,7 +16,14 @@ the standard output. Once read, checker executes them and displays `OK` if integ
 are sorted. Otherwise, it will display `KO`.
 - The second one called push_swap which calculates and displays on the standard
 output the smallest progam using Push_swap instruction language that sorts integer
-arguments received.
+arguments received.  
+
+Allowed functions:
+- write
+- read
+- malloc
+- free
+- exit
 
 ## Installation
 
