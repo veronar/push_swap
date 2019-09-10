@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 13:48:28 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/10 11:09:10 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,14 @@ int			main(int ac, char **av)
 {
 	t_dlist	*head_a;
 	t_dlist	*head_b;
+	t_env	*flags;
 
 	head_a = NULL;
 	head_b = NULL;
 	if (ac == 1)
 		return (0);
+	flags = NULL;
+	ft_flag_args(&ac, &av, flags);
 	if (ft_init_list(ac, av, &head_a) == 0)
 		return (ft_error(&head_a));
 	ft_addnorms(&head_a);

@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 09:01:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/06 13:33:34 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/10 09:36:47 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,11 @@ int			ft_error(t_dlist **head)
 {
 	ft_lst_del(head);
 	ft_putendl_fd("Error", 2);
+	exit(1);
+}
+
+int			ft_usage(void)
+{
+	ft_putendl_fd("Invalid option", 2);
 	exit(1);
 }

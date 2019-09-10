@@ -6,13 +6,19 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 13:18:46 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/10 11:07:16 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
 # define CHECKER_H
 # include "../libft/libft.h"
+
+typedef struct		s_env
+{
+	int				moves;
+	int				vis;
+}					t_env;
 
 typedef struct		s_dlist
 {
@@ -23,6 +29,7 @@ typedef struct		s_dlist
 }					t_dlist;
 
 int					ft_error(t_dlist **head);
+int					ft_usage(void);
 int					ft_checkint(char **av);
 t_dlist				*ft_newnode(char *av);
 int					ft_fill_list(t_dlist **head, int ac, char **av, int a);
@@ -56,5 +63,9 @@ int					ft_lst_size(t_dlist **head);
 
 void				ft_print_stack(t_dlist **head);
 void				ft_rev_print_stack(t_dlist **head);
+void				ft_print_stackboth(t_dlist **head_a, t_dlist **head_b);
+
+void				ft_args(int *ac, char ***av, t_env **flags);
+void				ft_flag_args(int *ac, char ***av, t_env *flags);
 
 #endif

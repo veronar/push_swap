@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/08/09 10:42:33 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/10 11:09:46 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int			ft_fill_list(t_dlist **head, int ac, char **av, int a)
 	t_dlist	*new_node;
 
 	current = *head;
-	while (a < ac)
+	while (a < ac - 1)
 	{
 		i = 0;
 		while (av[a][i] == ' ')
@@ -121,7 +121,7 @@ int			ft_init_list(int ac, char **av, t_dlist **head)
 {
 	int		a;
 
-	a = 1;
+	a = 0;
 	if (ft_checkint(av) != 1)
 		return (0);
 	if (ft_fill_list(head, ac, av, a) == 0)

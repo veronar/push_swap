@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 11:50:11 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/09 10:09:47 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ int			ft_do_op(char *line, t_dlist **head_a, t_dlist **head_b)
 		ft_lst_rev_rot_ab(head_a, head_a);
 	else
 		return (0);
+	ft_print_stackboth(head_a, head_b);
 	return (1);
 }
 
