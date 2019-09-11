@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 09:23:47 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/11 13:11:12 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/11 15:05:09 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void			ft_init_flag(t_env **flags)
 	//(*flags)->mov = 0;
 	//*flags = (t_env*)malloc(sizeof(t_env));
 	(*flags)->moves = 0;
-	//(*flags)->col = 0;
+	(*flags)->col = 0;
 	(*flags)->vis = 0;
 	//(*flags)->step = 0;
 	//(*flags)->opp = 0;
@@ -55,6 +55,12 @@ void			ft_flag_args(int *ac, char ***av, t_env **flags)
 			*av += 1;
 			*ac -= 1;
 			(*flags)->vis = 1;
+		}
+		else if (***av == 'c')
+		{
+			*av += 1;
+			*ac -= 1;
+			(*flags)->col = 1;
 		}
 /*		else if (***av == 'p')
 		{

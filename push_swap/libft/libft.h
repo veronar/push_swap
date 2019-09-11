@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 14:59:28 by vesingh           #+#    #+#             */
-/*   Updated: 2019/07/23 14:50:58 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/11 14:32:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ size_t				vs_strspn(const char *s, const char *charset);
 size_t				vs_strcspn(const char *s, const char *charset);
 char				*vs_strtok(char *str, const char *delim);
 char				*ft_itoa(int n);
+int					ft_itoa_len(int n);
 void				ft_putchar(char c);
 void				ft_putnbr(int n);
 void				ft_putstr(char const *s);

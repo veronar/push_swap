@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/11 13:01:34 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/11 15:06:37 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,19 @@
 # define CHECKER_H
 # include "../libft/libft.h"
 
+# define RESET "\033[00m"
+# define GREEN "\033[32m"
+# define BLUE "\033[34m"
+# define WHITE "\033[37m"
+# define RED "\033[31m"
+# define YELLOW "\033[33m"
+# define CYAN "\033[36m"
+
 typedef struct		s_env
 {
 	int				moves;
 	int				vis;
+	int				col;
 }					t_env;
 
 typedef struct		s_dlist
@@ -65,6 +74,7 @@ int					ft_lst_size(t_dlist **head);
 void				ft_print_stack(t_dlist **head);
 void				ft_rev_print_stack(t_dlist **head);
 void				ft_print_stackboth(t_dlist **head_a, t_dlist **head_b);
+void				ft_print_stackcol(t_dlist **head_a, t_dlist **head_b);
 
 //void				ft_args(int *ac, char ***av, t_env **flags);
 void				ft_flag_args(int *ac, char ***av, t_env **flags);

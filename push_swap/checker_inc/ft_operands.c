@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/11 13:05:34 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/11 15:07:07 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void		ft_check_flags(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	if ((*flags)->vis == 1)
 		ft_print_stackboth(head_a, head_b);
+	else if ((*flags)->col == 1)
+		ft_print_stackcol(head_a, head_b);
 }
 
 /*

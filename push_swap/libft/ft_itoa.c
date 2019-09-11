@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:41:12 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/30 12:21:33 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/11 14:32:16 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_itoa_len(int n)
+int				ft_itoa_len(int n)
 {
-	size_t	len;
+	int	len;
 
 	len = 0;
 	if (n == 0)
@@ -31,10 +31,10 @@ static size_t	ft_itoa_len(int n)
 
 char			*ft_itoa(int n)
 {
-	size_t		len;
+	int		len;
 	char		*result;
-	size_t		neg;
-	size_t		sign;
+	int		neg;
+	int		sign;
 
 	len = ft_itoa_len(n);
 	neg = 0;
