@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:20:57 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/11 17:31:57 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/11 18:44:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,10 @@ void		ft_print_stackboth(t_dlist **head_a, t_dlist **head_b)
 
 	stacka = *head_a;
 	stackb = *head_b;
-	ft_putstr_col_fd(BLUE, " - Stack A - ", 1);
-	ft_putstr_col_fd(RED, " - Stack B - \n", 1);
+	ft_putstr(" - Stack A - ");
+	ft_putendl(" - Stack B - ");
+	//ft_putstr_col_fd(BLUE, " - Stack A - ", 1);
+	//ft_putstr_col_fd(RED, " - Stack B - \n", 1);
 	while (stacka != NULL || stackb != NULL)
 	{
 		if (stacka != NULL)
@@ -72,28 +74,30 @@ void		ft_print_stackcol(t_dlist **head_a, t_dlist **head_b)
 
 	stacka = *head_a;
 	stackb = *head_b;
-	ft_putstr("\033[H\033[J");
+//	ft_putstr("\033[H\033[J");
 	//"\033[37mPush_Swap Built!\033[0m"
-	ft_putstr("\033[37m - Stack A - \033[0m");
-	ft_putendl("\033[34m - Stack B - \033[00m");
+//	ft_putstr("\033[37m - Stack A - \033[0m");
+//	ft_putendl("\033[34m - Stack B - \033[00m");
+	ft_putstr(" - Stack A - ");
+	ft_putendl(" - Stack B - ");
 	while (stacka != NULL || stackb != NULL)
 	{
 		if (stacka != NULL)
 		{
-			ft_putstr("\033[37m");
+			//ft_putstr("\033[37m");
 			ft_putnbr(stacka->n);
 			ft_whitespaces(stacka->n);
 			stacka = stacka->next;
-			ft_putstr("\033[0m");
+			//ft_putstr("\033[0m");
 		}
 		else if (stacka == NULL)
 			ft_putstr("             ");
 		if (stackb != NULL)
 		{
-			ft_putstr("\033[34m");
+			//ft_putstr("\033[34m");
 			ft_putnbr(stackb->n);
 			stackb = stackb->next;
-			ft_putstr("\033[00m");
+			//ft_putstr("\033[00m");
 		}
 		ft_putchar('\n');
 	}

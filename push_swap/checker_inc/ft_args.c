@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 09:23:47 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/11 15:05:09 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/11 18:29:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void			ft_init_flag(t_env **flags)
 	(*flags)->moves = 0;
 	(*flags)->col = 0;
 	(*flags)->vis = 0;
+	(*flags)->moves = -1;
 	//(*flags)->step = 0;
 	//(*flags)->opp = 0;
 	//(*flags)->done = 0;
@@ -26,7 +27,8 @@ void			ft_init_flag(t_env **flags)
 }
 
 /*
-** ft_is_arg: Checks whether the current av input should be handled as an argument.
+** ft_is_arg: Checks whether the current av input should be handled as\
+** an argument.
 */
 
 static int		ft_is_arg(char *av)
@@ -37,7 +39,8 @@ static int		ft_is_arg(char *av)
 }
 
 /*
-** Handles whether any arguments are passed in, and skips over them.
+** ft_flag_args: Handles whether any arguments are passed in, and skips\
+** over them.
 */
 
 void			ft_flag_args(int *ac, char ***av, t_env **flags)
@@ -62,21 +65,14 @@ void			ft_flag_args(int *ac, char ***av, t_env **flags)
 			*ac -= 1;
 			(*flags)->col = 1;
 		}
-/*		else if (***av == 'p')
+		else if (***av == 'm')
 		{
 			*av += 1;
 			*ac -= 1;
-			(*flags)->p = 1;
+			(*flags)->moves = 0;
 		}
-		else if (***av == 'c')
-		{
-			*av += 1;
-			*ac -= 1;
-			args->c = 1;
-		}*/
 		else
 			ft_usage();
 	}
-
 	return ;
 }

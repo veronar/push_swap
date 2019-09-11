@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/11 15:07:07 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/11 18:38:18 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void		ft_check_flags(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_print_stackboth(head_a, head_b);
 	else if ((*flags)->col == 1)
 		ft_print_stackcol(head_a, head_b);
+	if ((*flags)->moves != -1)
+		(*flags)->moves++;
 }
 
 /*
@@ -79,6 +81,24 @@ int			ft_do_op(char *line, t_dlist **head_a, t_dlist **head_b)
 	return (1);
 }
 
+void		ft_flag_moves(t_env **flags)
+{
+	if ((*flags)->moves != -1)
+	{
+		ft_putstr("Moves = ");
+		ft_putnbr((*flags)->moves);
+		ft_putchar('\n');
+	}
+}
+
+void		ft_end_check(t_dlist **head_a, t_dlist **head_b)
+{
+	if (ft_check_sort(head_a, head_b) == 1)
+		ft_putendl("OK");
+	else
+		ft_putendl("KO");
+}
+
 /*
 ** ft_read_op: Reads operations from the terminal.
 ** calls ft_do_op to runs operations.
@@ -103,10 +123,8 @@ void		ft_read_op(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_check_flags(head_a, head_b, flags);
 	}
 	ft_memdel((void**)&line);
-	if (ft_check_sort(head_a, head_b) == 1)
-		ft_putendl("OK");
-	else
-		ft_putendl("KO");
+	ft_flag_moves(flags);
+	ft_end_check(head_a, head_b);
 	ft_lst_del(head_b);
 	ft_lst_del(head_a);
 }
