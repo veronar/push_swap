@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_test.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:20:57 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/09 10:34:30 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/11 13:16:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void		ft_print_stackboth(t_dlist **head_a, t_dlist **head_b)
 		{
 			ft_putnbr(stacka->n);
 			stacka = stacka->next;
-			ft_putstr("");
+			ft_putstr("             ");
 		}
 		else if (stacka == NULL)
 			ft_putstr("             ");

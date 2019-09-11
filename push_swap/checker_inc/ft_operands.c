@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_operands.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/09 10:09:47 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/11 13:05:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 #include "../libft/libft.h"
+
+void		ft_check_flags(t_dlist **head_a, t_dlist **head_b, t_env **flags)
+{
+	if ((*flags)->vis == 1)
+		ft_print_stackboth(head_a, head_b);
+}
 
 /*
 ** ft_check_sort: check the n values of each node in list.
@@ -67,8 +73,7 @@ int			ft_do_op(char *line, t_dlist **head_a, t_dlist **head_b)
 	else if (ft_strcmp(line, "rrr") == 0)
 		ft_lst_rev_rot_ab(head_a, head_a);
 	else
-		return (0);
-	ft_print_stackboth(head_a, head_b);
+		return (-1);
 	return (1);
 }
 
@@ -77,11 +82,12 @@ int			ft_do_op(char *line, t_dlist **head_a, t_dlist **head_b)
 ** calls ft_do_op to runs operations.
 */
 
-void		ft_read_op(t_dlist **head_a, t_dlist **head_b)
+void		ft_read_op(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	char	*line;
 
 	line = NULL;
+	(void)*flags;
 	while (get_next_line(0, &line))
 	{
 		if (ft_do_op(line, head_a, head_b) == 1)
@@ -92,6 +98,7 @@ void		ft_read_op(t_dlist **head_a, t_dlist **head_b)
 			ft_memdel((void **)&line);
 			ft_error(head_a);
 		}
+		ft_check_flags(head_a, head_b, flags);
 	}
 	ft_memdel((void**)&line);
 	if (ft_check_sort(head_a, head_b) == 1)

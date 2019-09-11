@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/10 11:08:54 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/11 13:15:02 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ int			main(int ac, char **av)
 
 	head_a = NULL;
 	head_b = NULL;
-	flags = NULL;
+	flags = (t_env*)malloc(sizeof(t_env));
 	if (ac == 1)
 		return (0);
-	ft_flag_args(&ac, &av, flags);
+	ft_flag_args(&ac, &av, &flags);
 	if (ft_init_list(ac, av, &head_a) == 0)
 		return (ft_error(&head_a));
 	ft_addnorms_checker(&head_a);
-	ft_read_op(&head_a, &head_b);
+	ft_read_op(&head_a, &head_b, &flags);
 	return (0);
 }

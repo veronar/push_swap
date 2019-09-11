@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/10 11:07:16 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/11 13:01:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ t_dlist				*ft_init_list_b(int a, int norm);
 t_dlist				*ft_newnode_b(int a, int norm);
 int					ft_check_sort(t_dlist **head_a, t_dlist **head_b);
 int					ft_do_op(char *line, t_dlist **head_a, t_dlist **head_b);
-void				ft_read_op(t_dlist **head_a, t_dlist **head_b);
+void				ft_read_op(t_dlist **head_a, t_dlist **head_b,\
+					t_env **flags);
 void				ft_lst_del(t_dlist **head);
 int					ft_check_dup(t_dlist **head);
 void				ft_push_new_b(t_dlist **head_a, t_dlist **head_b);
@@ -65,7 +66,7 @@ void				ft_print_stack(t_dlist **head);
 void				ft_rev_print_stack(t_dlist **head);
 void				ft_print_stackboth(t_dlist **head_a, t_dlist **head_b);
 
-void				ft_args(int *ac, char ***av, t_env **flags);
-void				ft_flag_args(int *ac, char ***av, t_env *flags);
+//void				ft_args(int *ac, char ***av, t_env **flags);
+void				ft_flag_args(int *ac, char ***av, t_env **flags);
 
 #endif
