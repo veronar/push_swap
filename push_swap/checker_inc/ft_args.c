@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 09:23:47 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 11:10:41 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 13:54:16 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,18 @@ static int		ft_is_arg(char *av)
 ** over them.
 */
 
+void			ft_shiftargs(int *ac, char ***av, char c, t_env **flags)
+{
+	*av += 1;
+	*ac -= 1;
+	if (c == 'v')
+		(*flags)->vis = 1;
+	else if (c == 'c')
+		(*flags)->col = 1;
+	else if (c == 'm')
+		(*flags)->moves = 0;
+}
+
 void			ft_flag_args(int *ac, char ***av, t_env **flags)
 {
 	*av += 1;
@@ -52,23 +64,11 @@ void			ft_flag_args(int *ac, char ***av, t_env **flags)
 			ft_usage();
 		**av += 1;
 		if (***av == 'v')
-		{
-			*av += 1;
-			*ac -= 1;
-			(*flags)->vis = 1;
-		}
+			ft_shiftargs(ac, av, ***av, flags);
 		else if (***av == 'c')
-		{
-			*av += 1;
-			*ac -= 1;
-			(*flags)->col = 1;
-		}
+			ft_shiftargs(ac, av, ***av, flags);
 		else if (***av == 'm')
-		{
-			*av += 1;
-			*ac -= 1;
-			(*flags)->moves = 0;
-		}
+			ft_shiftargs(ac, av, ***av, flags);
 		else
 			ft_usage();
 	}

@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 11:09:26 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 14:10:36 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 void		ft_check_flags(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
-	if ((*flags)->vis == 1)
-		ft_print_stackboth(head_a, head_b);
-	else if ((*flags)->col == 1)
+	if ((*flags)->col == 1)
 		ft_print_stackcol(head_a, head_b);
+	else if ((*flags)->vis == 1)
+		ft_print_stackboth(head_a, head_b);
 	if ((*flags)->moves != -1)
 		(*flags)->moves++;
 }
@@ -83,10 +83,16 @@ int			ft_do_op(char *line, t_dlist **head_a, t_dlist **head_b)
 
 void		ft_flag_moves(t_env **flags)
 {
-	if ((*flags)->moves > -1)
+	if ((*flags)->moves > -1 && (*flags)->col == 1)
 	{
-		ft_putstr("Moves: ");
-		ft_putnbr((*flags)->moves);
+		ft_putstr_col_fd(GREEN, "Moves: ", 1);
+		ft_putnbr_col_fd(GREEN, (*flags)->moves, 1);
+		ft_putchar('\n');
+	}
+	else if ((*flags)->moves > -1 && (*flags)->col == 0)
+	{
+		ft_putstr_col_fd(WHITE, "Moves: ", 1);
+		ft_putnbr_col_fd(WHITE, (*flags)->moves, 1);
 		ft_putchar('\n');
 	}
 }
@@ -116,7 +122,7 @@ void		ft_read_op(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 	}
 	ft_memdel((void**)&line);
 	ft_flag_moves(flags);
-	ft_end_check(head_a, head_b);
+	ft_end_check(head_a, head_b, flags);
 	ft_lst_del(head_b);
 	ft_lst_del(head_a);
 	ft_memdel((void**)flags);

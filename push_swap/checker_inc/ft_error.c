@@ -6,19 +6,29 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 09:01:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 10:35:00 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 14:13:06 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 #include "../libft/libft.h"
 
-void		ft_end_check(t_dlist **head_a, t_dlist **head_b)
+void		ft_end_check(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
-	if (ft_check_sort(head_a, head_b) == 1)
+	if ((*flags)->col == 0)
+	{
+		if (ft_check_sort(head_a, head_b) == 1)
 		ft_putendl("OK");
 	else
 		ft_putendl("KO");
+	}
+	else if ((*flags)->col == 1)
+	{
+		if (ft_check_sort(head_a, head_b) == 1)
+		ft_putstr_col_fd(GREEN, "OK\n", 1);
+	else
+		ft_putstr_col_fd(RED, "KO\n", 1);
+	}
 }
 
 /*

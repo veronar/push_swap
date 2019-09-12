@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 16:09:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 12:05:44 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 13:39:21 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void		ft_rb_rrb(t_dlist **head_a, t_dlist **head_b, int pos,\
 ** as i.
 */
 
-void		ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range,\
+void		ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i,\
 			t_env **flags)
 {
 	int	pos;
@@ -85,14 +85,13 @@ void		ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range,\
 	pos = 0;
 	while (*head_b != NULL)
 	{
-		while (i > 0 && i >= range - 5)
+		while (i > 0)
 		{
 			pos = ft_normlargepos(head_b, i);
 			ft_rb_rrb(head_a, head_b, pos, flags);
 			ft_push_pa(head_a, head_b, flags);
 			i--;
 		}
-		range = range - 5;
 	}
 }
 
@@ -128,7 +127,7 @@ void		ft_100_sort(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		}
 	}
 	i--;
-	ft_pushback_b(head_a, head_b, i, range, flags);
+	ft_pushback_b(head_a, head_b, i, flags);
 }
 
 /*
@@ -162,5 +161,5 @@ void		ft_500_sort(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		}
 	}
 	i--;
-	ft_pushback_b(head_a, head_b, i, range, flags);
+	ft_pushback_b(head_a, head_b, i, flags);
 }

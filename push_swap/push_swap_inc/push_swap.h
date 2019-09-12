@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 11:58:33 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 13:38:51 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int			ft_big_list(t_dlist **head_a, t_dlist **head_b, int lstlen,\
 			t_env **flags);
 void		ft_addnorms(t_dlist **head_a);
 int			ft_normlargepos(t_dlist **head, int large);
-void		ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range,\
+void		ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i,\
 			t_env **flags);
 void		ft_100_sort(t_dlist **head_a, t_dlist **head_b, t_env **flags);
 void		ft_500_sort(t_dlist **head_a, t_dlist **head_b, t_env **flags);

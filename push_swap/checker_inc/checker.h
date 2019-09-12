@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 10:58:09 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 14:13:53 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,11 @@ void				ft_push_new_a(t_dlist **head_a, t_dlist **head_b);
 int					ft_check_int_inner(char **av, int *i, int *j);
 int					ft_fill_list_inner(char **av, int *a, int *i, \
 					t_dlist **new_node);
-void				ft_assign_newnode(t_dlist **head, t_dlist **current, \
+void				ft_assign_newnode(t_dlist **head, t_dlist **current,\
 					t_dlist **new_node);
 long long			ft_atoll(char *str);
-void				ft_end_check(t_dlist **head_a, t_dlist **head_b);
+void				ft_end_check(t_dlist **head_a, t_dlist **head_b,\
+					t_env **flags);
 
 void				ft_addnorms_checker(t_dlist **head_a);
 int					ft_lst_size(t_dlist **head);
@@ -69,7 +70,6 @@ void				ft_rev_print_stack(t_dlist **head);
 void				ft_print_stackboth(t_dlist **head_a, t_dlist **head_b);
 void				ft_print_stackcol(t_dlist **head_a, t_dlist **head_b);
 
-//void				ft_args(int *ac, char ***av, t_env **flags);
 void				ft_flag_args(int *ac, char ***av, t_env **flags);
 void				ft_check_flags(t_dlist **head_a, t_dlist **head_b,\
 					t_env **flags);
