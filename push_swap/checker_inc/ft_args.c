@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 09:23:47 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 10:24:53 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 11:10:41 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,7 @@ static int		ft_is_arg(char *av)
 void			ft_flag_args(int *ac, char ***av, t_env **flags)
 {
 	*av += 1;
-	if (ft_is_arg(**av))
-		ft_init_flag(flags);
+	ft_init_flag(flags);
 	while (*ac > 0 && ft_is_arg(**av))
 	{
 		if (*ac == 0)

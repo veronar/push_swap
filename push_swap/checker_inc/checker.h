@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 10:34:42 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 10:58:09 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,8 @@ void				ft_print_stackcol(t_dlist **head_a, t_dlist **head_b);
 
 //void				ft_args(int *ac, char ***av, t_env **flags);
 void				ft_flag_args(int *ac, char ***av, t_env **flags);
+void				ft_check_flags(t_dlist **head_a, t_dlist **head_b,\
+					t_env **flags);
+void				ft_flag_moves(t_env **flags);
 
 #endif

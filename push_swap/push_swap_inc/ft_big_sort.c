@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 16:09:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/06 10:05:21 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 11:24:37 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,15 @@
 ** is used.
 */
 
-int			ft_big_list(t_dlist **head_a, t_dlist **head_b, int lstlen)
+int			ft_big_list(t_dlist **head_a, t_dlist **head_b, int lstlen,\
+			t_env **flags)
 {
 	if (ft_check_sort(head_a, head_b) == 1)
 		return (1);
 	if (lstlen < 101)
-		ft_100_sort(head_a, head_b);
+		ft_100_sort(head_a, head_b, flags);
 	else
-		ft_500_sort(head_a, head_b);
+		ft_500_sort(head_a, head_b, flags);
 	if (ft_check_sort(head_a, head_b) == 0)
 	{
 		ft_lst_del(head_b);
@@ -75,7 +76,8 @@ void		ft_rb_rrb(t_dlist **head_b, int pos)
 ** as i.
 */
 
-void		ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range)
+void		ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range,\
+			t_env **flags)
 {
 	int	pos;
 
@@ -86,7 +88,7 @@ void		ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range)
 		{
 			pos = ft_normlargepos(head_b, i);
 			ft_rb_rrb(head_b, pos);
-			ft_push_pa(head_a, head_b);
+			ft_push_pa(head_a, head_b, flags);
 			i--;
 		}
 		range = range - 5;
@@ -101,7 +103,7 @@ void		ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range)
 ** This way we are kinda of sorting the list by chunks of 20 numbers.
 */
 
-void		ft_100_sort(t_dlist **head_a, t_dlist **head_b)
+void		ft_100_sort(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	int		i;
 	int		range;
@@ -125,7 +127,7 @@ void		ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 		}
 	}
 	i--;
-	ft_pushback_b(head_a, head_b, i, range);
+	ft_pushback_b(head_a, head_b, i, range, flags);
 }
 
 /*
@@ -133,7 +135,7 @@ void		ft_100_sort(t_dlist **head_a, t_dlist **head_b)
 ** number, instead of 20 at a time, we now check 44 at a time.
 */
 
-void		ft_500_sort(t_dlist **head_a, t_dlist **head_b)
+void		ft_500_sort(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	t_dlist	*stack_a;
 	int		i;
@@ -159,5 +161,5 @@ void		ft_500_sort(t_dlist **head_a, t_dlist **head_b)
 		}
 	}
 	i--;
-	ft_pushback_b(head_a, head_b, i, range);
+	ft_pushback_b(head_a, head_b, i, range, flags);
 }

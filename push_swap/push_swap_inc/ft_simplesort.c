@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 09:04:05 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 11:47:37 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 11:25:37 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,15 +62,19 @@ int			ft_is_ascending(t_dlist **head)
 ** smallest number to the top of stack B by calling "pb"
 */
 
-int			ft_small_to_top(t_dlist **head_a, t_dlist **head_b)
+int			ft_small_to_top(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	t_dlist	*small;
 
 	small = ft_smallest(head_a);
 	while (small->n != (*head_a)->n)
+	{
+		ft_check_flags(head_a, head_b, flags);
 		ft_push_rota(head_a);
+	}
 	if (ft_is_ascending(head_a) == 1)
 		return (1);
+	ft_check_flags(head_a, head_b, flags);
 	ft_push_pb(head_a, head_b);
 	return (0);
 }
@@ -81,7 +85,7 @@ int			ft_small_to_top(t_dlist **head_a, t_dlist **head_b)
 ** dependant on that list size
 */
 
-void		ft_sortsize(t_dlist **head_a, t_dlist **head_b)
+void		ft_sortsize(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	int	lstlen;
 
@@ -91,11 +95,12 @@ void		ft_sortsize(t_dlist **head_a, t_dlist **head_b)
 	else if (lstlen == 1)
 		return ;
 	else if (lstlen == 2)
-		ft_2list(head_a, head_b);
+		ft_2list(head_a, head_b, flags);
 	else if (lstlen == 3)
-		ft_3list(head_a, head_b);
+		ft_3list(head_a, head_b, flags);
 	else if (lstlen <= 5)
-		ft_5list(head_a, head_b);
+		ft_5list(head_a, head_b, flags);
 	else
-		ft_big_list(head_a, head_b, lstlen);
+		ft_big_list(head_a, head_b, lstlen, flags);
+	ft_flag_moves(flags);
 }

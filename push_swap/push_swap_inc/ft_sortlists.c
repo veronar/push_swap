@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 10:47:13 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 13:19:22 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 11:20:18 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@
 ** if not sorted, sa, and return
 */
 
-void		ft_2list(t_dlist **head_a, t_dlist **head_b)
+void		ft_2list(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	if (ft_check_sort(head_a, head_b) == 1)
 		return ;
 	ft_lst_swap(head_a);
+	ft_check_flags(head_a, head_b, flags);
 	ft_putstr("sa");
 	ft_putchar('\n');
 	return ;
@@ -40,7 +41,7 @@ void		ft_2list(t_dlist **head_a, t_dlist **head_b)
 ** with the case of 3 numbers, this stack should be sorted now.
 */
 
-int			ft_3list(t_dlist **head_a, t_dlist **head_b)
+int			ft_3list(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	t_dlist	*first;
 	t_dlist	*second;
@@ -53,16 +54,22 @@ int			ft_3list(t_dlist **head_a, t_dlist **head_b)
 		return (1);
 	if ((first->n > second->n) && (second->n > last->n))
 	{
-		ft_push_swapa(head_a);
-		ft_push_revrota(head_a);
+		//ft_check_flags(head_a, head_b, flags);
+		ft_push_swapa(head_a, head_b, flags);
+		//ft_check_flags(head_a, head_b, flags);
+		ft_push_revrota(head_a, head_b, flags);
 		return (1);
 	}
-	if (ft_small_to_top(head_a, head_b) == 1)
+	if (ft_small_to_top(head_a, head_b, flags) == 1)
 		if (ft_check_sort(head_a, head_b) == 1)
 			return (1);
 	if ((*head_a)->n > (*head_a)->next->n)
-		ft_push_swapa(head_a);
-	ft_push_pa(head_a, head_b);
+	{
+		//ft_check_flags(head_a, head_b, flags);
+		ft_push_swapa(head_a, head_b, flags);
+	}
+	//ft_check_flags(head_a, head_b, flags);
+	ft_push_pa(head_a, head_b, flags);
 	return (ft_check_sort(head_a, head_b));
 }
 
@@ -100,7 +107,7 @@ int			ft_small_pos(t_dlist **head_a, t_dlist *smallest)
 ** As with ft_small_to_top it will either check sort or "pb".
 */
 
-int			ft_small_top_5(t_dlist **head_a, t_dlist **head_b)
+int			ft_small_top_5(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	t_dlist	*small;
 	int		pos;
@@ -110,7 +117,7 @@ int			ft_small_top_5(t_dlist **head_a, t_dlist **head_b)
 	if (pos > (ft_lst_size(head_a) / 2))
 	{
 		while (small->n != (*head_a)->n)
-			ft_push_revrota(head_a);
+			ft_push_revrota(head_a, head_b, flags);
 	}
 	else
 	{
@@ -131,20 +138,20 @@ int			ft_small_top_5(t_dlist **head_a, t_dlist **head_b)
 ** numbers in stack B, this will mean that stack A is now sorted.
 */
 
-int			ft_5list(t_dlist **head_a, t_dlist **head_b)
+int			ft_5list(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	if (ft_check_sort(head_a, head_b) == 1)
 		return (1);
 	while (ft_lst_size(head_a) > 3)
 	{
-		if (ft_small_top_5(head_a, head_b) == 1)
+		if (ft_small_top_5(head_a, head_b, flags) == 1)
 		{
 			if (ft_check_sort(head_a, head_b) == 1)
 				return (1);
 		}
 	}
-	ft_3list(head_a, head_b);
+	ft_3list(head_a, head_b, flags);
 	while (*head_b != NULL)
-		ft_push_pa(head_a, head_b);
+		ft_push_pa(head_a, head_b, flags);
 	return (ft_check_sort(head_a, head_b));
 }
