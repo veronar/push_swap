@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 15:44:58 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 10:28:43 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 10:39:24 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putchar_fd(a, fd);
 }
 
-void		ft_putnbr_col_fd(char *colour, int nbr, int fd)
+void	ft_putnbr_col_fd(char *colour, int nbr, int fd)
 {
 	ft_putstr_fd(colour, fd);
 	ft_putnbr_fd(nbr, fd);

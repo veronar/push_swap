@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:41:12 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/11 14:32:16 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/12 10:39:08 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int				ft_itoa_len(int n)
 char			*ft_itoa(int n)
 {
 	int		len;
-	char		*result;
+	char	*result;
 	int		neg;
 	int		sign;
 
