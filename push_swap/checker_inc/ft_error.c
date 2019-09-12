@@ -3,15 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 09:01:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/11 09:20:54 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/12 10:35:00 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 #include "../libft/libft.h"
+
+void		ft_end_check(t_dlist **head_a, t_dlist **head_b)
+{
+	if (ft_check_sort(head_a, head_b) == 1)
+		ft_putendl("OK");
+	else
+		ft_putendl("KO");
+}
 
 /*
 ** frees all nodes in a list

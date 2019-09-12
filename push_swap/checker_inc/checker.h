@@ -3,24 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/11 17:54:02 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/12 10:34:42 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
 # define CHECKER_H
 # include "../libft/libft.h"
-
-# define RESET "\033[00m"
-# define GREEN "\033[32m"
-# define BLUE "\033[34m"
-# define WHITE "\033[37m"
-# define RED "\033[31m"
-# define YELLOW "\033[33m"
-# define CYAN "\033[36m"
 
 typedef struct		s_env
 {
@@ -67,6 +59,7 @@ int					ft_fill_list_inner(char **av, int *a, int *i, \
 void				ft_assign_newnode(t_dlist **head, t_dlist **current, \
 					t_dlist **new_node);
 long long			ft_atoll(char *str);
+void				ft_end_check(t_dlist **head_a, t_dlist **head_b);
 
 void				ft_addnorms_checker(t_dlist **head_a);
 int					ft_lst_size(t_dlist **head);

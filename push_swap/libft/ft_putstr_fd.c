@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 15:35:17 by vesingh           #+#    #+#             */
-/*   Updated: 2019/05/30 12:23:10 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 10:28:05 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,11 @@ void	ft_putstr_fd(char const *s, int fd)
 		ft_putchar_fd(s[i], fd);
 		i++;
 	}
+}
+
+void		ft_putstr_col_fd(char *colour, char *str, int fd)
+{
+	ft_putstr_fd(colour, fd);
+	ft_putstr_fd(str, fd);
+	ft_putstr_fd(RESET, fd);
 }

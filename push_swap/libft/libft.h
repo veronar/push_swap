@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 14:59:28 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/11 14:32:04 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/12 10:32:38 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,15 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdio.h>
+
+# define RESET "\033[00m"
+# define GREEN "\033[32m"
+# define BLUE "\033[34m"
+# define WHITE "\033[37m"
+# define RED "\033[31m"
+# define YELLOW "\033[33m"
+# define CYAN "\033[36m"
+# define CLEAR "\033[H\033[J"
 
 typedef	struct		s_list
 {
@@ -95,5 +104,7 @@ char				*ft_strdupdel(char **str);
 char				*ft_strjoinfree(char *s1, char *s2);
 int					get_next_line(const int fd, char **line);
 void				ft_swap(int *a, int *b);
+void				ft_putnbr_col_fd(char *colour, int nbr, int fd);
+void				ft_putstr_col_fd(char *colour, char *str, int fd);
 
 #endif

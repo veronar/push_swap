@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_operands.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/11 18:38:18 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/12 10:35:04 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,18 +85,10 @@ void		ft_flag_moves(t_env **flags)
 {
 	if ((*flags)->moves != -1)
 	{
-		ft_putstr("Moves = ");
+		ft_putstr("Moves: ");
 		ft_putnbr((*flags)->moves);
 		ft_putchar('\n');
 	}
-}
-
-void		ft_end_check(t_dlist **head_a, t_dlist **head_b)
-{
-	if (ft_check_sort(head_a, head_b) == 1)
-		ft_putendl("OK");
-	else
-		ft_putendl("KO");
 }
 
 /*
