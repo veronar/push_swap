@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 09:04:05 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 11:25:37 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 12:02:21 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,11 @@ int			ft_small_to_top(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 	small = ft_smallest(head_a);
 	while (small->n != (*head_a)->n)
 	{
-		ft_check_flags(head_a, head_b, flags);
-		ft_push_rota(head_a);
+		ft_push_rota(head_a, head_b, flags);
 	}
 	if (ft_is_ascending(head_a) == 1)
 		return (1);
-	ft_check_flags(head_a, head_b, flags);
-	ft_push_pb(head_a, head_b);
+	ft_push_pb(head_a, head_b, flags);
 	return (0);
 }
 

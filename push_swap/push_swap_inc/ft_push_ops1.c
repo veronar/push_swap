@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 09:48:46 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 11:27:13 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 11:53:45 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,10 @@ void		ft_push_pa(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 	ft_putchar('\n');
 }
 
-void		ft_push_pb(t_dlist **head_a, t_dlist **head_b)
+void		ft_push_pb(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	ft_push_to_b(head_a, head_b);
+	ft_check_flags(head_a, head_b, flags);
 	ft_putstr("pb");
 	ft_putchar('\n');
 }

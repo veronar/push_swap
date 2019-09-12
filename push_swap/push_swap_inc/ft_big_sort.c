@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 16:09:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 11:24:37 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 12:05:44 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ int			ft_big_list(t_dlist **head_a, t_dlist **head_b, int lstlen,\
 ** times, else if it in the first half, rotate B x times.
 */
 
-void		ft_rb_rrb(t_dlist **head_b, int pos)
+void		ft_rb_rrb(t_dlist **head_a, t_dlist **head_b, int pos,\
+			t_env **flags)
 {
 	int	lstlen;
 
@@ -53,7 +54,7 @@ void		ft_rb_rrb(t_dlist **head_b, int pos)
 		pos = lstlen - pos;
 		while (pos != 0)
 		{
-			ft_push_revrotb(head_b);
+			ft_push_revrotb(head_a, head_b, flags);
 			pos--;
 		}
 	}
@@ -61,7 +62,7 @@ void		ft_rb_rrb(t_dlist **head_b, int pos)
 	{
 		while (pos != 0)
 		{
-			ft_push_rotb(head_b);
+			ft_push_rotb(head_a, head_b, flags);
 			pos--;
 		}
 	}
@@ -87,7 +88,7 @@ void		ft_pushback_b(t_dlist **head_a, t_dlist **head_b, int i, int range,\
 		while (i > 0 && i >= range - 5)
 		{
 			pos = ft_normlargepos(head_b, i);
-			ft_rb_rrb(head_b, pos);
+			ft_rb_rrb(head_a, head_b, pos, flags);
 			ft_push_pa(head_a, head_b, flags);
 			i--;
 		}
@@ -119,11 +120,11 @@ void		ft_100_sort(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 				break ;
 			if ((*head_a)->norm <= range)
 			{
-				ft_push_pb(head_a, head_b);
+				ft_push_pb(head_a, head_b, flags);
 				i++;
 			}
 			else
-				ft_push_rota(head_a);
+				ft_push_rota(head_a, head_b, flags);
 		}
 	}
 	i--;
@@ -153,11 +154,11 @@ void		ft_500_sort(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 				break ;
 			if (stack_a->norm <= range)
 			{
-				ft_push_pb(head_a, head_b);
+				ft_push_pb(head_a, head_b, flags);
 				i++;
 			}
 			else
-				ft_push_rota(head_a);
+				ft_push_rota(head_a, head_b, flags);
 		}
 	}
 	i--;

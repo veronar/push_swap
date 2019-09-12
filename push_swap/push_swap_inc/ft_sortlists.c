@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 10:47:13 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 11:20:18 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 12:01:04 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,7 @@ int			ft_3list(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		return (1);
 	if ((first->n > second->n) && (second->n > last->n))
 	{
-		//ft_check_flags(head_a, head_b, flags);
 		ft_push_swapa(head_a, head_b, flags);
-		//ft_check_flags(head_a, head_b, flags);
 		ft_push_revrota(head_a, head_b, flags);
 		return (1);
 	}
@@ -64,11 +62,7 @@ int			ft_3list(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		if (ft_check_sort(head_a, head_b) == 1)
 			return (1);
 	if ((*head_a)->n > (*head_a)->next->n)
-	{
-		//ft_check_flags(head_a, head_b, flags);
 		ft_push_swapa(head_a, head_b, flags);
-	}
-	//ft_check_flags(head_a, head_b, flags);
 	ft_push_pa(head_a, head_b, flags);
 	return (ft_check_sort(head_a, head_b));
 }
@@ -122,11 +116,11 @@ int			ft_small_top_5(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 	else
 	{
 		while (small->n != (*head_a)->n)
-			ft_push_rota(head_a);
+			ft_push_rota(head_a, head_b, flags);
 	}
 	if (ft_is_ascending(head_a) == 1)
 		return (1);
-	ft_push_pb(head_a, head_b);
+	ft_push_pb(head_a, head_b, flags);
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 11:24:23 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/12 11:58:33 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,16 @@ void		ft_100_sort(t_dlist **head_a, t_dlist **head_b, t_env **flags);
 void		ft_500_sort(t_dlist **head_a, t_dlist **head_b, t_env **flags);
 
 void		ft_push_swapa(t_dlist **head_a, t_dlist **head_b, t_env **flags);
-void		ft_push_swapb(t_dlist **head_b);
+void		ft_push_swapb(t_dlist **head_a, t_dlist **head_b, t_env **flags);
 void		ft_push_swapab(t_dlist **head_a, t_dlist **head_b, t_env **flags);
 void		ft_push_pa(t_dlist **head_a, t_dlist **head_b, t_env **flags);
-void		ft_push_pb(t_dlist **head_a, t_dlist **head_b);
-void		ft_push_rota(t_dlist **head_a);
-void		ft_push_rotb(t_dlist **head_b);
-void		ft_push_rotab(t_dlist **head_a, t_dlist **head_b);
+void		ft_push_pb(t_dlist **head_a, t_dlist **head_b, t_env **flags);
+void		ft_push_rota(t_dlist **head_a, t_dlist **head_b, t_env **flags);
+void		ft_push_rotb(t_dlist **head_a, t_dlist **head_b, t_env **flags);
+void		ft_push_rotab(t_dlist **head_a, t_dlist **head_b, t_env **flags);
 void		ft_push_revrota(t_dlist **head_a, t_dlist **head_b, t_env **flags);
-void		ft_push_revrotb(t_dlist **head_b);
-void		ft_push_revrotab(t_dlist **head_a, t_dlist **head_b);
+void		ft_push_revrotb(t_dlist **head_a, t_dlist **head_b, t_env **flags);
+void		ft_push_revrotab(t_dlist **head_a, t_dlist **head_b, t_env **flags);
 
 void		ft_print_stacknorm(t_dlist **head);
 
