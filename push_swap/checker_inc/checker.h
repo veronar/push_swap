@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 14:13:53 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 14:21:42 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ typedef struct		s_env
 	int				moves;
 	int				vis;
 	int				col;
+	int				opp;
+	int				slow;
 }					t_env;
 
 typedef struct		s_dlist

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_args.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 09:23:47 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 13:54:16 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 14:22:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void			ft_init_flag(t_env **flags)
 	(*flags)->vis = 0;
 	(*flags)->moves = -1;
 	//(*flags)->step = 0;
-	//(*flags)->opp = 0;
-	//(*flags)->done = 0;
+	(*flags)->opp = 0;
+	(*flags)->slow = 0;
 	return ;
 }
 
@@ -52,6 +52,10 @@ void			ft_shiftargs(int *ac, char ***av, char c, t_env **flags)
 		(*flags)->col = 1;
 	else if (c == 'm')
 		(*flags)->moves = 0;
+	else if (c == 'o')
+		(*flags)->opp = 1;
+	else if (c == 's')
+		(*flags)->slow = 1;
 }
 
 void			ft_flag_args(int *ac, char ***av, t_env **flags)
@@ -68,6 +72,10 @@ void			ft_flag_args(int *ac, char ***av, t_env **flags)
 		else if (***av == 'c')
 			ft_shiftargs(ac, av, ***av, flags);
 		else if (***av == 'm')
+			ft_shiftargs(ac, av, ***av, flags);
+		else if (***av == 'o')
+			ft_shiftargs(ac, av, ***av, flags);
+		else if (***av == 's')
 			ft_shiftargs(ac, av, ***av, flags);
 		else
 			ft_usage();

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printstacks.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 10:25:28 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 14:30:24 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 14:13:48 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void		ft_print_stackboth(t_dlist **head_a, t_dlist **head_b)
 	while (stacka != NULL || stackb != NULL)
 		ft_putstacks(&stacka, &stackb);
 	ft_putchar('\n');
+	//usleep(100000);
 }
 
 void		ft_putstacks_col(t_dlist **stacka, t_dlist **stackb)
@@ -85,4 +86,5 @@ void		ft_print_stackcol(t_dlist **head_a, t_dlist **head_b)
 	while (stacka != NULL || stackb != NULL)
 		ft_putstacks_col(&stacka, &stackb);
 	ft_putchar('\n');
+	//usleep(100000);
 }
