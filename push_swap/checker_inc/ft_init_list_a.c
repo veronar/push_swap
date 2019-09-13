@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_init_list_a.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/10 11:09:46 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 15:55:17 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,8 @@ int			ft_init_list(int ac, char **av, t_dlist **head)
 	int		a;
 
 	a = 0;
+	if (ac == 0)
+		ft_error(head);
 	if (ft_checkint(av) != 1)
 		return (0);
 	if (ft_fill_list(head, ac, av, a) == 0)

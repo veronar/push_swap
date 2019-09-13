@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 09:23:47 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 14:22:13 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/13 16:02:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,8 @@ void			ft_flag_args(int *ac, char ***av, t_env **flags)
 	{
 		if (*ac == 0)
 			ft_usage();
-		**av += 1;
+		if (*ac > 1)
+			**av += 1;
 		if (***av == 'v')
 			ft_shiftargs(ac, av, ***av, flags);
 		else if (***av == 'c')

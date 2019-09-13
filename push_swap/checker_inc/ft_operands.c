@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_operands.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 14:10:36 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 16:04:41 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,8 @@ void		ft_flag_moves(t_env **flags)
 {
 	if ((*flags)->moves > -1 && (*flags)->col == 1)
 	{
-		ft_putstr_col_fd(GREEN, "Moves: ", 1);
-		ft_putnbr_col_fd(GREEN, (*flags)->moves, 1);
+		ft_putstr_col_fd(YELLOW, "Moves: ", 1);
+		ft_putnbr_col_fd(YELLOW, (*flags)->moves, 1);
 		ft_putchar('\n');
 	}
 	else if ((*flags)->moves > -1 && (*flags)->col == 0)

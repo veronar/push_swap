@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 09:01:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 14:13:06 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 15:58:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,6 @@ int			ft_error(t_dlist **head)
 
 int			ft_usage(void)
 {
-	ft_putendl_fd("Invalid option", 2);
+	ft_putendl_fd("Invalid input", 2);
 	exit(1);
 }
