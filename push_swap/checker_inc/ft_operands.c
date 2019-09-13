@@ -6,12 +6,17 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 16:04:41 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/13 16:42:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-#include "../libft/libft.h"
+
+/*
+** ft_check_flags: checks if colour or visual flag is on, if it is then print
+** the stacks. This is called after each move is done.
+** Then checks if moves flag is on, if it is then adds to the move counter.
+*/
 
 void		ft_check_flags(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
@@ -80,6 +85,13 @@ int			ft_do_op(char *line, t_dlist **head_a, t_dlist **head_b)
 		return (-1);
 	return (1);
 }
+
+/*
+** ft_flag_moves: At end of Checker & Push_swap, called to check if moves flag\
+** is is greater that > -1. If it is then prints the amount of moves as the end\
+** of program. If colour flag is on it prints it in Yellow, else just prints in\
+** white.
+*/
 
 void		ft_flag_moves(t_env **flags)
 {

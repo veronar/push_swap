@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_swap.c                                      :+:      :+:    :+:   */
+/*   ft_lst_swap&init_b.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 13:34:43 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 16:43:01 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-#include "../libft/libft.h"
 
 /*
 ** ft_lst_swap: swap the first 2 elements at the top of a stack.
@@ -49,4 +48,36 @@ void		ft_ss_swap_ab(t_dlist **head_a, t_dlist **head_b)
 		ft_lst_swap(head_a);
 	if (!(b == NULL || b->next == NULL))
 		ft_lst_swap(head_b);
+}
+
+/*
+** ft_newnode_b: creates the headnode (starts the list) for stack b
+** Take an int as an argument and stores it in the headnode
+** ->next && ->prev are equal to NULL as it is head and only node
+*/
+
+t_dlist		*ft_newnode_b(int a, int norm)
+{
+	t_dlist	*new;
+
+	if (!(new = ft_memalloc(sizeof(t_dlist))))
+		return (NULL);
+	new->prev = NULL;
+	new->n = a;
+	new->norm = norm;
+	new->next = NULL;
+	return (new);
+}
+
+/*
+** ft_init_list_b: only initialised by push_to_b / push_new_b
+*/
+
+t_dlist		*ft_init_list_b(int b, int norm)
+{
+	t_dlist	*head_b;
+
+	if (!(head_b = ft_newnode_b(b, norm)))
+		return (NULL);
+	return (head_b);
 }

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lst_push.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 12:35:23 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/04 12:49:57 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 16:42:52 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-#include "../libft/libft.h"
 
 /*
 ** ft_push_new_b: take the first element at the top stack a and puts

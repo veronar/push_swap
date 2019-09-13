@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 13:33:16 by vesingh           #+#    #+#              #
-#    Updated: 2019/09/12 10:30:56 by vesingh          ###   ########.fr        #
+#    Updated: 2019/09/13 16:56:30 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,10 @@ LIBRARY = $(addprefix $(LIBRARY_DIR), $(LIBRARY_NAME))
 FLAGS = -Wall -Werror -Wextra
 
 CHECK_FUNC =	checker.c\
-				ft_lst_swap.c\
+				ft_lst_swap_init_b.c\
 				ft_lst_rotate.c\
 				ft_lst_push.c\
- 				ft_lst_rev_rotate.c\
 				ft_init_list_a.c\
-				ft_init_list_b.c\
 				ft_operands.c\
 				ft_check_ints.c\
 				ft_error.c\
@@ -45,12 +43,10 @@ PUSH_FUNC = 	push_swap.c\
 				ft_push_ops3.c\
 				ft_big_sort.c\
 				ft_stack_ops.c\
-				../checker_inc/ft_lst_swap.c\
+				../checker_inc/ft_lst_swap_init_b.c\
 				../checker_inc/ft_lst_rotate.c\
 				../checker_inc/ft_lst_push.c\
- 				../checker_inc/ft_lst_rev_rotate.c\
 				../checker_inc/ft_init_list_a.c\
-				../checker_inc/ft_init_list_b.c\
 				../checker_inc/ft_operands.c\
 				../checker_inc/ft_check_ints.c\
 				../checker_inc/ft_error.c\

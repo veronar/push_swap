@@ -6,12 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 09:56:33 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 15:55:17 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/13 16:42:48 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-#include "../libft/libft.h"
 
 /*
 ** ft_newnode: creates a new node at the end of list

@@ -3,15 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_simplesort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 09:04:05 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 12:02:21 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 16:53:37 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "../libft/libft.h"
+
+/*
+** ft_is descending: checks if stack is sorted in descending order
+** Will be used for stack be, before pushing all back to stack a.
+*/
 
 int			ft_is_descending(t_dlist **head)
 {

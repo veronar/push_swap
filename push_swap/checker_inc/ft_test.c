@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_test.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:20:57 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 10:28:24 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 16:45:16 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-#include "../libft/libft.h"
+
+/*
+** ft_print_stack: Made to test if linked list works in next direction.
+*/
 
 void		ft_print_stack(t_dlist **head)
 {
@@ -27,6 +30,10 @@ void		ft_print_stack(t_dlist **head)
 	}
 	ft_putchar('\n');
 }
+
+/*
+** ft_rev_print_stack: Made to test if linked list works in previous direction.
+*/
 
 void		ft_rev_print_stack(t_dlist **head)
 {
@@ -46,6 +53,10 @@ void		ft_rev_print_stack(t_dlist **head)
 	}
 	ft_putchar('\n');
 }
+
+/*
+** ft_print_stacknorm: Made to test if norm values functions works.
+*/
 
 void		ft_print_stacknorm(t_dlist **head)
 {

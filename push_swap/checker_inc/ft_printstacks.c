@@ -6,11 +6,16 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 10:25:28 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 14:13:48 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/13 16:42:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** ft_whitespaces: Prints white spaces after number in stack A in printed
+** this is to make stack b align properly.
+*/
 
 void		ft_whitespaces(int n)
 {
@@ -20,6 +25,11 @@ void		ft_whitespaces(int n)
 	while (i--)
 		ft_putchar_fd(' ', 1);
 }
+
+/*
+** ft_putstacks: gets called to print number in a, then white space, then\
+** number in b.
+*/
 
 void		ft_putstacks(t_dlist **stacka, t_dlist **stackb)
 {
@@ -39,6 +49,10 @@ void		ft_putstacks(t_dlist **stacka, t_dlist **stackb)
 	ft_putchar_fd('\n', 1);
 }
 
+/*
+** ft_print_stackboth: prints both stacks - called when visual mode is on.
+*/
+
 void		ft_print_stackboth(t_dlist **head_a, t_dlist **head_b)
 {
 	t_dlist	*stacka;
@@ -52,8 +66,12 @@ void		ft_print_stackboth(t_dlist **head_a, t_dlist **head_b)
 	while (stacka != NULL || stackb != NULL)
 		ft_putstacks(&stacka, &stackb);
 	ft_putchar('\n');
-	//usleep(100000);
 }
+
+/*
+** ft_putstacks_col: gets called to print number in a, then white space, then\
+** number in b. This prints it in colour when colour mode is on.
+*/
 
 void		ft_putstacks_col(t_dlist **stacka, t_dlist **stackb)
 {
@@ -73,6 +91,10 @@ void		ft_putstacks_col(t_dlist **stacka, t_dlist **stackb)
 	ft_putchar_fd('\n', 1);
 }
 
+/*
+** ft_print_stackboth: prints both stacks - called when colour mode is on.
+*/
+
 void		ft_print_stackcol(t_dlist **head_a, t_dlist **head_b)
 {
 	t_dlist	*stacka;
@@ -86,5 +108,4 @@ void		ft_print_stackcol(t_dlist **head_a, t_dlist **head_b)
 	while (stacka != NULL || stackb != NULL)
 		ft_putstacks_col(&stacka, &stackb);
 	ft_putchar('\n');
-	//usleep(100000);
 }

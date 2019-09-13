@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_ints.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:02:59 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/10 11:02:04 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 16:42:40 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-#include "../libft/libft.h"
 
 /*
 ** ft_checkdup: checks each number in the list for duplicates

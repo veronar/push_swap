@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/12 10:56:21 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/13 16:53:54 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,5 @@ int			main(int ac, char **av)
 	ft_sortsize(&head_a, &head_b, &flags);
 	ft_lst_del(&head_a);
 	ft_lst_del(&head_b);
-	//sleep(60);
-	//ft_memdel((void**)flags);
 	return (0);
 }

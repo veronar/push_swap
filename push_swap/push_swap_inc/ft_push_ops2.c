@@ -6,12 +6,19 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 09:55:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 15:26:16 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/13 16:51:27 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "../libft/libft.h"
+
+/*
+** ft_push_rota: Applies the Checker function and then checks env flags
+** if col & vis is off then prints "ra"
+** else if opp flag is on then print last operation
+** lastly if slow made is on apply usleep.
+*/
 
 void		ft_push_rota(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
@@ -26,6 +33,13 @@ void		ft_push_rota(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		SLOW_MODE
 }
 
+/*
+** ft_push_rotb: Applies the Checker function and then checks env flags
+** if col & vis is off then prints "rb"
+** else if opp flag is on then print last operation
+** lastly if slow made is on apply usleep.
+*/
+
 void		ft_push_rotb(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {
 	ft_lst_rot(head_b);
@@ -38,6 +52,13 @@ void		ft_push_rotb(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 	if ((*flags)->slow == 1)
 		SLOW_MODE
 }
+
+/*
+** ft_push_rotab: Applies the Checker function and then checks env flags
+** if col & vis is off then prints "rr"
+** else if opp flag is on then print last operation
+** lastly if slow made is on apply usleep.
+*/
 
 void		ft_push_rotab(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 {

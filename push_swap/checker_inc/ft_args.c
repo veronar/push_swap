@@ -6,20 +6,23 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 09:23:47 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 16:02:31 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/13 16:57:54 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
+/*
+** ft_init_flag: assigns the initial values (0) to all flags
+** Moves flag is set to -1 which is off. If it turns on then it is 0. Therefore\
+** after each move move++ can be used to add to the counter.
+*/
+
 void			ft_init_flag(t_env **flags)
 {
-	//(*flags)->mov = 0;
-	//*flags = (t_env*)malloc(sizeof(t_env));
 	(*flags)->col = 0;
 	(*flags)->vis = 0;
 	(*flags)->moves = -1;
-	//(*flags)->step = 0;
 	(*flags)->opp = 0;
 	(*flags)->slow = 0;
 	return ;
@@ -58,6 +61,12 @@ void			ft_shiftargs(int *ac, char ***av, char c, t_env **flags)
 		(*flags)->slow = 1;
 }
 
+/*
+** ft_flag_args: assesses the flags that were given, if v - visual mode on.
+** If c - colour mode on. If m - moves mode on. If o - opps mode on.
+** if s - slow mode on. If any other flag then call ft_usage() for Invalid.
+*/
+
 void			ft_flag_args(int *ac, char ***av, t_env **flags)
 {
 	*av += 1;
@@ -66,7 +75,7 @@ void			ft_flag_args(int *ac, char ***av, t_env **flags)
 	{
 		if (*ac == 0)
 			ft_usage();
-		if (*ac > 1)
+		if (*ac > 2)
 			**av += 1;
 		if (***av == 'v')
 			ft_shiftargs(ac, av, ***av, flags);
