@@ -75,16 +75,25 @@ the last one.
 - `rrb` : reverse rotate b - shift down all elements of stack b by 1. The flast element becomes the first one.
 - `rrr` : rra and rrb at the same time.
   
-  The programs can be run independantly of each other.  
-  They can also be run simultaneously with the following format:
-  ```
-  ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
-  ```
+The programs can be run independantly of each other.  
+They can also be run simultaneously with the following format:
+```
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
+```
 
-  Number of operations done by push_swap can be checked in the follwing way:
-  ```
-  ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l
-  ```
+Number of operations done by push_swap can be checked in the follwing way:
+```
+ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l
+```
 
-  ## Shout-out
-  Thanks to [@FWMoor](https://github.com/FWMoor) & [@CharlieDeltaZA](https://github.com/CharlieDeltaZA) for major help in optimising my sorting algorithm for large stacks!
+### Usage Flags
+
+The following flags can be used with Push_swap (and Checker where relevant):
+- `-v` : Visual mode. Prints stacks to the terminal.
+- `-c` : Colour mode. Prints stacks in colour to the terminal.
+- `-s` : Slow mode. Adds a pause in order to make output more easily readable.
+- `-o` : Shows last operation performed.
+- `-m` : Shows total amount of move / operations done.
+
+## Shout-out
+Thanks to [@FWMoor](https://github.com/FWMoor) & [@CharlieDeltaZA](https://github.com/CharlieDeltaZA) for major help in optimising my sorting algorithm for large stacks!
