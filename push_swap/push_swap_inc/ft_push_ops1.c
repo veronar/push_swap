@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 09:48:46 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 14:28:40 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/13 15:27:19 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void		ft_push_swapa(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_putstr_col_fd(WHITE, "Last op: sa", 1);
 	ft_putchar('\n');
 	if ((*flags)->slow == 1)
-		usleep(100000);
+		SLOW_MODE
 }
 
 void		ft_push_swapb(t_dlist **head_a, t_dlist **head_b, t_env **flags)
@@ -36,7 +36,7 @@ void		ft_push_swapb(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_putstr_col_fd(WHITE, "Last op: sb", 1);
 	ft_putchar('\n');
 	if ((*flags)->slow == 1)
-		usleep(100000);
+		SLOW_MODE
 }
 
 void		ft_push_swapab(t_dlist **head_a, t_dlist **head_b, t_env **flags)
@@ -49,7 +49,7 @@ void		ft_push_swapab(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_putstr_col_fd(WHITE, "Last op: ss", 1);
 	ft_putchar('\n');
 	if ((*flags)->slow == 1)
-		usleep(100000);
+		SLOW_MODE
 }
 
 void		ft_push_pa(t_dlist **head_a, t_dlist **head_b, t_env **flags)
@@ -62,7 +62,7 @@ void		ft_push_pa(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_putstr_col_fd(WHITE, "Last op: pa", 1);
 	ft_putchar('\n');
 	if ((*flags)->slow == 1)
-		usleep(100000);
+		SLOW_MODE
 }
 
 void		ft_push_pb(t_dlist **head_a, t_dlist **head_b, t_env **flags)
@@ -75,5 +75,5 @@ void		ft_push_pb(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_putstr_col_fd(WHITE, "Last op: pb", 1);
 	ft_putchar('\n');
 	if ((*flags)->slow == 1)
-		usleep(100000);
+		SLOW_MODE
 }

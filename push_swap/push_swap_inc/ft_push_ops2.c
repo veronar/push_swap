@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 09:55:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 14:29:39 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/13 15:26:16 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void		ft_push_rota(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_putstr_col_fd(WHITE, "Last op: ra", 1);
 	ft_putchar('\n');
 	if ((*flags)->slow == 1)
-		usleep(100000);
+		SLOW_MODE
 }
 
 void		ft_push_rotb(t_dlist **head_a, t_dlist **head_b, t_env **flags)
@@ -36,7 +36,7 @@ void		ft_push_rotb(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_putstr_col_fd(WHITE, "Last op: rb", 1);
 	ft_putchar('\n');
 	if ((*flags)->slow == 1)
-		usleep(100000);
+		SLOW_MODE
 }
 
 void		ft_push_rotab(t_dlist **head_a, t_dlist **head_b, t_env **flags)
@@ -49,5 +49,5 @@ void		ft_push_rotab(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_putstr_col_fd(WHITE, "Last op: rr", 1);
 	ft_putchar('\n');
 	if ((*flags)->slow == 1)
-		usleep(100000);
+		SLOW_MODE
 }

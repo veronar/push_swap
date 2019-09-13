@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 10:01:29 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 14:30:53 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/13 15:27:21 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void		ft_push_revrota(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_putstr_col_fd(WHITE, "Last op: rra", 1);
 	ft_putchar('\n');
 	if ((*flags)->slow == 1)
-		usleep(100000);
+		SLOW_MODE
 }
 
 void		ft_push_revrotb(t_dlist **head_a, t_dlist **head_b, t_env **flags)
@@ -36,7 +36,7 @@ void		ft_push_revrotb(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_putstr_col_fd(WHITE, "Last op: rrb", 1);
 	ft_putchar('\n');
 	if ((*flags)->slow == 1)
-		usleep(100000);
+		SLOW_MODE
 }
 
 void		ft_push_revrotab(t_dlist **head_a, t_dlist **head_b, t_env **flags)
@@ -49,5 +49,5 @@ void		ft_push_revrotab(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		ft_putstr_col_fd(WHITE, "Last op: rrr", 1);
 	ft_putchar('\n');
 	if ((*flags)->slow == 1)
-		usleep(100000);
+		SLOW_MODE
 }
