@@ -3,14 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_args.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 09:23:47 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 16:57:54 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/16 11:28:14 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** ft_flags_first: checks if colour or visual flag is on, if it is then print
+** the stacks. This is called after each move is done.
+** Then checks if moves flag is on, if it is then adds to the move counter.
+*/
+
+void			ft_flags_first(t_dlist **head_a, t_dlist **head_b,\
+				t_env **flags)
+{
+	if ((*flags)->col == 1)
+		ft_print_stackcol(head_a, head_b);
+	else if ((*flags)->vis == 1)
+		ft_print_stackboth(head_a, head_b);
+}
 
 /*
 ** ft_init_flag: assigns the initial values (0) to all flags

@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:16 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/16 09:53:28 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/16 11:22:38 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int			main(int ac, char **av)
 	ft_sortsize(&head_a, &head_b, &flags);
 	ft_lst_del(&head_a);
 	ft_lst_del(&head_b);
+	free(flags);
 	return (0);
 }

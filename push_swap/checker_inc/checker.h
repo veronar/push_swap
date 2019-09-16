@@ -6,7 +6,7 @@
 /*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/16 09:41:33 by vesingh          ###   ########.fr       */
+/*   Updated: 2019/09/16 11:25:09 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,7 @@ void				ft_flag_args(int *ac, char ***av, t_env **flags);
 void				ft_check_flags(t_dlist **head_a, t_dlist **head_b,\
 					t_env **flags);
 void				ft_flag_moves(t_env **flags);
+void				ft_flags_first(t_dlist **head_a, t_dlist **head_b,\
+					t_env **flags);
 
 #endif

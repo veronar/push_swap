@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sortlists.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 10:47:13 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 16:54:01 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/16 11:12:21 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ int			ft_small_top_5(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 		while (small->n != (*head_a)->n)
 			ft_push_rota(head_a, head_b, flags);
 	}
-	if (ft_is_ascending(head_a) == 1)
+	if (ft_is_ascending(head_a) == 1 && *head_b == NULL)
 		return (1);
 	ft_push_pb(head_a, head_b, flags);
 	return (0);
