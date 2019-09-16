@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_operands.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 11:32:25 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 16:42:34 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/16 09:28:00 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ void		ft_read_op(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 	char	*line;
 
 	line = NULL;
-	(void)*flags;
+	ft_check_flags(head_a, head_b, flags);
 	while (get_next_line(0, &line))
 	{
 		if (ft_do_op(line, head_a, head_b) == 1)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 08:21:07 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 16:01:30 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/16 09:41:33 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define CHECKER_H
 # include "../libft/libft.h"
 
-# define SLOW_MODE usleep(50000);
+# define SLOW 50000
 
 /*
 ** t_env: environment struct to allow for flags (Bonus)

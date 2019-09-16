@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vesingh <vesingh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 09:01:27 by vesingh           #+#    #+#             */
-/*   Updated: 2019/09/13 16:42:43 by marvin           ###   ########.fr       */
+/*   Updated: 2019/09/16 07:26:38 by vesingh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ void		ft_end_check(t_dlist **head_a, t_dlist **head_b, t_env **flags)
 	if ((*flags)->col == 0)
 	{
 		if (ft_check_sort(head_a, head_b) == 1)
-		ft_putendl("OK");
-	else
-		ft_putendl("KO");
+			ft_putendl("OK");
+		else
+			ft_putendl("KO");
 	}
 	else if ((*flags)->col == 1)
 	{
 		if (ft_check_sort(head_a, head_b) == 1)
-		ft_putstr_col_fd(GREEN, "OK\n", 1);
-	else
-		ft_putstr_col_fd(RED, "KO\n", 1);
+			ft_putstr_col_fd(GREEN, "OK\n", 1);
+		else
+			ft_putstr_col_fd(RED, "KO\n", 1);
 	}
 }
 
